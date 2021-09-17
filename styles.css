@@ -1,0 +1,18 @@
+/* Telechargement des polices*/
+@font-face {
+    font-family :'Alegreya';
+    src: url('Polices/Alegreya.eot')format('eot');
+}
+
+@font-face {
+    font-family :'Scriptina';
+    src: url('Polices/Scriptina.ttf')format('ttf');
+}
+
+@font-face {
+    font-family :'Nova';
+    src: url('Polices/Nova.eot')format('eot');
+}
+
+/* Styles de base */
+

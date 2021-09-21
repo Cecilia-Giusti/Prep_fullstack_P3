@@ -10,20 +10,73 @@
     <link rel="stylesheet" href="styles.css"/>
   </head>
 
- <body>       
-   <!-- Header  -->
-   <header>
-   </header>
+<body>     
+  <div id="container">  
+    <!-- Header  -->
+      <header>
+        <nav>
+          <!-- Logo-->
+          <div id="logo_GBAF">
+            <img src="images_web/logo_fonbblanc.png" alt="Logo GBAF" />
+          </div>
+
+          <!-- Nom & prénom s'il y a connexion-->
+
+          <!--Deconnexion s'il y a connexion -->
+
+        </nav>
+      </header>
    
-   <!-- Section   -->
-   <section id="">
-   </section> 
+    <!-- Formulaire de connexion   -->
+      <section id="formulaireDeConnexion">
+        <form action="connexion_post.php" method="post">
+          
+          <h1> Se connecter</h1>
+            <div id="connexion">
+              <div class="label">
+                <label for="name">UserName :</label>
+              </div>
+
+              <div class="emplacement">
+                <input type="text" id="name" name="UserName" required >
+              </div>
+
+              <div class="label">
+                <label for="password">Password :</label>
+              </div>
+
+              <div class="emplacement">
+                <input type="password" id="password" name="password" required>
+              </div>
+
+              <div id="motDePasseOublie">
+              <i><a href="motDePasse.html">Mot de passé oublié ? </a> </i>
+              </div>
+
+              <div class="submit">
+                <input type="submit" id='submit' value='Connexion' >
+              </div>  
+
+              <div id="inscription">
+                <input class="inscription" type="button" value="Inscription">
+              </div>
+
+            </div>
+        </form>
+
+      </section> 
 
 
    
-   <footer>
-   </footer>
-
+      <footer>
+        <div id="menuFooter">
+          <ul>
+            <Li><a href="">| Mentions Légales |</a></Li>
+            <li><a href="">Contact |</a></li>
+          </ul>
+        </div>
+      </footer>
+  </div>
 </body>
 
 </html>

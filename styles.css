@@ -1,18 +1,146 @@
-/* Telechargement des polices*/
-@font-face {
-    font-family :'Alegreya';
-    src: url('Polices/Alegreya.eot')format('eot');
-}
 
-@font-face {
-    font-family :'Scriptina';
-    src: url('Polices/Scriptina.ttf')format('ttf');
-}
-
-@font-face {
-    font-family :'Nova';
-    src: url('Polices/Nova.eot')format('eot');
-}
 
 /* Styles de base */
+
+/* Body*/
+
+body {
+    background-color: #F3F3F3;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0px;
+}
+
+/* Header */
+
+
+    /* Nav*/
+
+    nav {
+        background-color: white;
+        width:100%;
+        margin-top:-2%;
+    }
+
+    #logo_GBAF img{
+        width:10%;
+        margin-left: 5%
+    }
+
+/* Formulaire de connexion */
+
+#formulaireDeConnexion {
+    background-color: white;
+    margin : auto;
+    width: 25%;
+    padding: 2%;
+    margin-top:5%;
+    margin-bottom :5%;
+    
+}
+
+    /* Titre du formulaire de connexion */
+    #formulaireDeConnexion h1 {
+        text-align : center;
+        font-size: 2em;
+        margin-bottom:10%;
+    }
+
+    /*Marge à gauche des divers éléments*/
+    #connexion {
+        margin-left: 20%;
+    }
+
+    /* Mise en page des labels */
+    .label {
+        padding-top: 2%;
+        padding-bottom:2%;
+        margin-top:4%;
+    }
+
+
+    /* Mise en forme des cases d'insertion*/
+    #name, #password {
+        background-color: #e5e5e5;
+        box-shadow: inset 1px 3px 5px #c2c1c1;
+        border:none;
+        padding-top:2%;
+        padding-bottom:2%;
+        padding-right: 20%;
+        
+    }
+
+    input:focus{
+        outline:  none;
+    }
+
+    /* Design du mot de passe oublié */
+    #connexion a {
+        text-decoration: none;
+        color:black;
+        font-size: 0.8em;
+        
+    }
+
+    #connexion a:hover{
+        border-bottom: 1px solid black;
+    }
+
+    #motDePasseOublie {
+        margin-bottom:15%;
+    }
+
+
+    /* Design des boutons */
+    #submit, .inscription{
+        background-color: #ed1e24;
+        color:white;
+        border-radius: 5px;
+        border:none;
+        padding-top:2.5%;
+        padding-bottom:2.5%;
+        padding-left:6%;
+        padding-right:6%;
+        margin:2%;
+    }
+
+    #submit:hover{
+        background-color: #333;
+        transition-duration: 0.5s;
+        transition-property: background-color;
+    }
+
+    .inscription:hover{
+        background-color: #333;
+        transition-duration: 0.5s;
+        transition-property: background-color;
+    }
+
+    .submit, #inscription {
+        text-align: center;
+        width: 80%;
+    }
+
+   footer {
+       background-color: #333;
+       color:white;
+   } 
+
+   #menuFooter li{
+       list-style: none;
+       text-align:center;
+       display:inline;
+       font-size:0.8em;
+       margin:auto;
+   }
+
+   #menuFooter ul{
+       text-align:center;
+    padding-top:2%;
+   }
+
+   #menuFooter a{
+       text-decoration: none;
+       color:white;
+   }
 

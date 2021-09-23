@@ -76,10 +76,16 @@ body {
         margin-right:2%;
     }
 
+ /* Titre h1 */
+    #formulaireDeConnexion h1, #formulaireDinscription h1, #formulaireMotDePasse h1, #mentionsLegales h1, #contact h1, #modificationMotDePasse h1{
+        text-align : center;
+        font-size: 2em;
+        margin-bottom:10%;
+    }
 
 /* Formulaire de connexion */
 
-#formulaireDeConnexion, #formulaireMotDePasse {
+#formulaireDeConnexion, #formulaireMotDePasse, #contact, #modificationMotDePasse {
     background-color: white;
     margin : auto;
     width: 25%;
@@ -89,15 +95,10 @@ body {
     
 }
 
-    /* Titre du formulaire de connexion */
-    #formulaireDeConnexion h1, #formulaireDinscription h1, #formulaireMotDePasse h1, #mentionsLegales h1{
-        text-align : center;
-        font-size: 2em;
-        margin-bottom:10%;
-    }
+   
 
     /*Marge à gauche des divers éléments*/
-    #connexion, #margeMotDePasse {
+    #connexion, #margeMotDePasse, #contactNous {
         margin-left: 20%;
     }
 
@@ -110,7 +111,7 @@ body {
 
 
     /* Mise en forme des cases d'insertion*/
-    #name, #password,#prenom, #userName, #question, #reponse {
+    #name, #password,#prenom, #userName, #question, #reponse, #email, #objet, #message {
         background-color: #e5e5e5;
         box-shadow: inset 1px 3px 5px #c2c1c1;
         border:none;
@@ -253,6 +254,15 @@ body {
     #mentionsLegales p {
         font-size: 0.8em;
         text-align:justify;
+    }
+
+    /*Message*/
+
+    #message {
+        margin-bottom: 10%;
+        height: 100px;
+        
+        
     }
 
 

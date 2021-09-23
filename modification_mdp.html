@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Modification du mot de passe</title>
+    <meta name="description" content="L'extranet pour les salariés de GBAF">
+    <link rel="stylesheet" href="styles.css"/>
+  </head>
+
+<body>     
+  <div id="container">  
+    <!-- Header  -->
+      <header>
+        <nav>
+          <!-- Logo-->
+          <div id="logo_GBAF">
+            <img src="images_web/logo_fonbblanc.png" alt="Logo GBAF" />
+          </div>
+
+          <!-- Nom & prénom s'il y a connexion-->
+          <div id="barreDidentite">
+            <ul> 
+            <li><img src="images_web/icone_identite.png" alt="Image identite"/></li>
+            <li><a class="nomPrenom" href="parametres.html"> Nom & Prénom <a></li>
+          </ul>
+          </div>
+          <!--Deconnexion s'il y a connexion -->
+          <div id="deconnexion">
+          <a class="deconnexion" href="connexion.html">Déconnexion</a>
+          </div>
+
+        </nav>
+      </header>
+   
+    <!-- Paramètre du compte  -->
+      <section id="modificationMotDePasse">
+          <form action="inscription_post.php" method="post">
+            
+            <h1> Mot de passe oublié</h1>
+              <div id="margeMotDePasse">
+
+                <div class="label">
+                  <label for="password">Ancien mot de passe :</label>
+                </div>
+                <div class="emplacement">
+                  <input type="text" id="password" name="password"  >
+                </div>
+
+                <div class="label">
+                  <label for="password"> Nouveau mot de passe :
+                <div class="emplacement">
+                  <input type="password" id="password" name="password" required>
+                </div>
+
+                <div class="label">
+                  <label for="password">Confirmer le nouveau mot de passe :
+                <div class="emplacement">
+                  <input type="password" id="password" name="password" required>
+                </div>
+
+                <div id="modification">
+                  <input class="modification" type="button" value="Modifier">
+                </div>
+
+                <div class="Retour">
+                  <i><a href="index.html">Retour </a> </i>
+                  </div>
+
+           
+
+              </div>
+          </form>
+        
+      </section> 
+
+
+   
+      <footer>
+        <div id="menuFooter">
+          <ul>
+            <Li>|<a href="mentionslegales.html"> Mentions Légales </a>|</Li>
+            <li><a href="contact.html">Contact </a>|</li>
+          </ul>
+        </div>
+      </footer>
+  </div>
+</body>
+
+</html>

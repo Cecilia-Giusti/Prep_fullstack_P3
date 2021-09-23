@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Modification de la question secrète</title>
+    <meta name="description" content="L'extranet pour les salariés de GBAF">
+    <link rel="stylesheet" href="styles.css"/>
+  </head>
+
+<body>     
+  <div id="container">  
+    <!-- Header  -->
+      <header>
+        <nav>
+          <!-- Logo-->
+          <div id="logo_GBAF">
+            <img src="images_web/logo_fonbblanc.png" alt="Logo GBAF" />
+          </div>
+
+          <!-- Nom & prénom s'il y a connexion-->
+          <div id="barreDidentite">
+            <ul> 
+            <li><img src="images_web/icone_identite.png" alt="Image identite"/></li>
+            <li><a class="nomPrenom" href="parametres.html"> Nom & Prénom <a></li>
+          </ul>
+          </div>
+          <!--Deconnexion s'il y a connexion -->
+          <div id="deconnexion">
+          <a class="deconnexion" href="connexion.html">Déconnexion</a>
+          </div>
+
+        </nav>
+      </header>
+   
+    <!-- Modification de la question secrète  -->
+      <section id="modificationQuestion">
+          <form action="inscription_post.php" method="post">
+            
+            <h1> Modification de la question secrète</h1>
+              <div id="margeMotDePasse">
+
+                <div class="label">
+                  <label for="password">Mot de passe :</label>
+                </div>
+                <div class="emplacement">
+                  <input type="text" id="password" name="password" required >
+                </div>
+
+                <div class="label">
+                    <label for="question">Nouvelle question secrète :</label>
+                  </div>
+                  <div class="emplacement">
+                    <input type="text" id="question" name="quesionSecrete" required >
+                  </div>
+  
+                  <div class="label">
+                    <label for="reponse">Réponse :</label>
+                  </div>
+                  <div class="emplacement">
+                    <input type="text" id="reponse" name="UserName" required >
+                  </div>
+
+                <div id="modification">
+                  <input class="modification" type="button" value="Modifier">
+                </div>
+
+                <div class="Retour">
+                  <i><a href="index.html">Retour </a> </i>
+                  </div>
+
+           
+
+              </div>
+          </form>
+        
+      </section> 
+
+
+   
+      <footer>
+        <div id="menuFooter">
+          <ul>
+            <Li>|<a href="mentionslegales.html"> Mentions Légales </a>|</Li>
+            <li><a href="contact.html">Contact </a>|</li>
+          </ul>
+        </div>
+      </footer>
+  </div>
+</body>
+
+</html>

@@ -90,7 +90,7 @@ body {
 }
 
     /* Titre du formulaire de connexion */
-    #formulaireDeConnexion h1, #formulaireDinscription h1, #formulaireMotDePasse h1{
+    #formulaireDeConnexion h1, #formulaireDinscription h1, #formulaireMotDePasse h1, #mentionsLegales h1{
         text-align : center;
         font-size: 2em;
         margin-bottom:10%;
@@ -236,6 +236,23 @@ body {
     #modification{
         margin-bottom:5%;
         margin-top:5%;
+    }
+
+
+    /* Design des mentions légales */
+    #mentionsLegales {
+        background-color: white;
+        margin : auto;
+        width: 65%;
+        padding: 2%;
+        margin-top:5%;
+        margin-bottom :5%;
+        
+    }
+
+    #mentionsLegales p {
+        font-size: 0.8em;
+        text-align:justify;
     }
 
 

@@ -22,6 +22,7 @@ body {
         background-color: white;
         width:100%;
         margin-top:-2%;
+        
     }
 
     #logo_GBAF img{
@@ -167,7 +168,7 @@ body {
         transition-property: background-color;
     }
 
-    .submit, #inscription, #modification {
+    .submit, #inscription, #modification, .lirePlus {
         text-align: center;
         width: 80%;
     }
@@ -277,6 +278,95 @@ body {
         
     }
 
+    /* Page d'accueil */
+
+        /* en tête */
+
+        #entete {
+            width : 100%;
+           position: relative;
+            text-align: center;
+            margin-top:-1.2%;
+            
+        }
+
+        #entete img {
+            width:100%;
+            
+        }
+        #GBAF {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color:#ffffff88;
+            padding:8%;
+          }
+        
+          #GBAF p {
+              text-align : justify;
+          }
+
+
+          #texteActeurs {
+            background-color: white;
+            margin : auto;
+            width: 100%;
+           padding-top:2%;
+           padding-bottom:2%;       
+          }
+
+          #texteActeurs h2 {
+            text-align : center;
+            font-size: 2em;
+            
+          }
+
+          #texteActeurs p {
+            text-align:justify;
+            padding-left:8%;
+            padding-right:8%;
+
+          }
+
+
+          /*Design des articles dans la page d'accueil */
+
+         
+          article{
+            background-color: white;
+            margin : auto;
+            width: 60%;
+            padding :2%;
+            margin-top :2%;
+
+            display :flex;
+            flex-direction: row;
+            flex-wrap:nowrap;
+            justify-content: flex-start;
+          }
+
+         
+
+          article img {
+              width :30%;
+              border: 1px solid black;
+              margin-right:2%;
+              
+          }
+
+          .paragraphe {
+              width:100%;
+          }
+
+             /*Bouton*/
+
+                .lirePlus  {
+                    
+                    align-self: flex-end;
+                }
+
+          
 
 
     /* Design du footer*/

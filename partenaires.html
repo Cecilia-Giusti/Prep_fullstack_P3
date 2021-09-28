@@ -5,25 +5,85 @@
     <meta charset="utf-8"> 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Extranet GBAF</title>
+    <title>Partenaires et acteurs de la GBAF</title>
     <meta name="description" content="L'extranet pour les salariés de GBAF">
     <link rel="stylesheet" href="styles.css"/>
   </head>
 
  <body>       
-   <!-- Header  -->
-   <header>
-   </header>
+  <div id="container">  
+       <!-- Header  -->
+  <header>
+    <nav>
+      <!-- Logo-->
+      <div id="logo_GBAF">
+        <img src="images_web/logo_fonbblanc.png" alt="Logo GBAF" />
+      </div>
+
+      <!-- Nom & prénom s'il y a connexion-->
+      <div id="barreDidentite">
+        <ul> 
+        <li><img src="images_web/icone_identite.png" alt="Image identite"/></li>
+        <li><a class="nomPrenom" href="parametres.html"> Nom & Prénom <a></li>
+        </ul>
+      </div>
+      <!--Deconnexion s'il y a connexion -->
+      <div id="deconnexion">
+        <a class="deconnexion" href="connexion.html">Déconnexion</a>
+      </div>
+
+    </nav>
+  </header>
    
    <!-- Section   -->
-   <section id="about">
+   <section id="acteurPartenaire">
+    <img src="images_web/CDE.png" alt="Logo CDE"/>
+    <h2> CDE (chambre des entrepreneurs) </h2>
+    <p>La CDE (Chambre Des Entrepreneurs) accompagne les entreprises dans leurs démarches de formation. 
+      Son président est élu pour 3 ans par ses pairs, chefs d’entreprises et présidents des CDE.
+    </p>
    </section> 
 
+  <section id="commentaire">
+    <div id="menuCommentaire">
+      <p>XX commentaires </p>
+      <div class="inputCommentaire"><input onclick="window.location.href=''" class="boutonCommentaire" type="button" value="Commenter"></div>
+      <div class="inputCommentaire"><input type=image src="images_web/like.png" onclick="window.location.href=''" class="boutonCommentaire" type="button" >
+      <input type=image src="images_web/dislike.png" onclick="window.location.href=''" class="boutonCommentaire" type="button" ></div>
+    </div>
+
+    <article>
+      <p>Prénom :</p>
+      <p>Date :</p>
+      <p>Texte :</p>
+    </article>
+
+    <article>
+      <p>Prénom :</p>
+      <p>Date :</p>
+      <p>Texte :</p>
+    </article>
+
+    <article>
+      <p>Prénom :</p>
+      <p>Date :</p>
+      <p>Texte :</p>
+    </article>
+
+
+  </section>
+ 
 
    
-   <footer>
-   </footer>
-
+    <footer>
+  <div id="menuFooter">
+    <ul>
+      <Li>|<a href="mentionslegales.html"> Mentions Légales </a>|</Li>
+      <li><a href="contact.html">Contact </a>|</li>
+    </ul>
+  </div>
+      </footer>
+  </div>
 </body>
 
 </html>

@@ -144,7 +144,7 @@ body {
 
 
     /* Design des boutons */
-    #submit, .inscription ,.modification{
+    #submit, .inscription ,.modification, .boutonCommentaire{
         background-color: #ed1e24;
         color:white;
         border-radius: 5px;
@@ -156,13 +156,7 @@ body {
         margin:2%;
     }
 
-    #submit:hover{
-        background-color: #333;
-        transition-duration: 0.5s;
-        transition-property: background-color;
-    }
-
-    .inscription:hover{
+    #submit:hover, .boutonCommentaire:hover, .inscription:hover{
         background-color: #333;
         transition-duration: 0.5s;
         transition-property: background-color;
@@ -366,8 +360,80 @@ body {
                     align-self: flex-end;
                 }
 
-          
 
+        /* Design de la page acteurs etpartenaires*/
+        
+        #acteurPartenaire {
+            background-color: white;
+            margin : auto;
+            width: 80%;
+            padding :2%;
+            margin-top :2%;
+            margin:auto;
+            text-align:center;
+        }
+
+        #acteurPartenaire img {
+            width:50%;
+            border: 1px solid black;
+        }
+
+
+        #acteurPartenaire p {
+            width:60%;
+            margin:auto;
+        }
+
+            /*Design de la partie des commentaires */
+
+            #commentaire {
+            background-color: white;
+            width: 80%;
+            padding: 2%;
+            margin:auto;
+            
+
+            }  
+            
+            #menuCommentaire {
+                display:flex;
+                flex-wrap: nowrap;
+                justify-content: flex-end;
+                align-items: center;
+                margin:auto;
+                width:85%;
+                
+                
+            }
+
+            #menuCommentaire p {
+                width:40%;
+                margin-left:30%;
+                
+                
+            }
+            
+
+            .inputCommentaire {
+                margin-left:5%;
+                width:70%;
+                
+            }
+
+            
+
+           /* Design des commentaires*/
+
+           #commentaire article {
+               display: flex;
+               flex-direction: column;
+
+               background-color: #e5e5e5;
+               width:80%;
+               
+           }
+
+   
 
     /* Design du footer*/
 
@@ -393,6 +459,8 @@ body {
        text-decoration: none;
        color:white;
    }
+
+
 
 }
 

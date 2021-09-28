@@ -13,6 +13,7 @@ body {
     margin:0px;
 }
 
+ 
 /* Header */
 
 
@@ -27,9 +28,25 @@ body {
 
     #logo_GBAF img{
         width:10%;
-        margin-left: 5%
+        margin-left: 5%}
+    
+        @media all and (max-device-width: 900px) {
+    nav {
+        background-color: white;
+        width:100%;
+        margin-top:-2%;
+        text-align: center;
+        
     }
 
+    #logo_GBAF img{
+        width:15%;
+        
+    }
+
+}
+
+@media all and (min-width: 1300px) {
 
     /* Barre d'identité */
 
@@ -57,10 +74,11 @@ body {
     .nomPrenom:hover {
         border-bottom:1px solid black;
     }
- /*Déconnexion */
+
+     /*Déconnexion */
 
 
-    .deconnexion{
+     .deconnexion{
         text-decoration: none;
         color :black;
         font-size:0.8em;
@@ -76,6 +94,179 @@ body {
         text-align: right;
         margin-right:2%;
     }
+
+
+}
+
+@media all and (min-width:901px) and  (max-width: 1300px) {
+
+/* Barre d'identité */
+
+#barreDidentite ul{
+    text-align:right;
+    margin-right:2%;
+    margin-top:-100px;
+    
+}
+
+#barreDidentite li{
+list-style: none;
+display:inline-block;
+}
+
+#barreDidentite img{
+    width:50%;
+}
+
+.nomPrenom{
+    text-decoration: none;
+    color :black;
+}
+
+.nomPrenom:hover {
+    border-bottom:1px solid black;
+}
+
+#deconnexion{
+    margin-top:100px;
+}
+
+ /*Déconnexion */
+
+
+ .deconnexion{
+    text-decoration: none;
+    color :black;
+    font-size:0.8em;
+    position:relative;
+    top:-100px;
+}
+
+.deconnexion:hover{
+    border-bottom: 1px solid black;
+}
+
+#deconnexion {
+    text-align: right;
+    margin-right:2%;
+}
+
+
+}
+
+@media all and (max-device-width: 900px) and (min-device-width:501px){
+
+    /* Barre d'identité */
+
+#barreDidentite ul{
+    text-align:center;
+
+    
+}
+
+#barreDidentite li{
+list-style: none;
+display:inline-block;
+
+}
+
+#barreDidentite img{
+    width:50%;
+}
+
+.nomPrenom{
+    text-decoration: none;
+    color :black;
+}
+
+.nomPrenom:hover {
+    border-bottom:1px solid black;
+}
+
+
+
+ /*Déconnexion */
+
+
+ .deconnexion{
+    text-decoration: none;
+    color :black;
+    font-size:0.8em;
+    
+}
+
+.deconnexion:hover{
+    border-bottom: 1px solid black;
+}
+
+#deconnexion {
+   text-align: right;
+   margin-right: 2%;
+   margin-top:2%;
+   padding-bottom: 2%;
+    
+   
+}
+}
+
+@media all and (max-device-width: 500px) {
+
+ 
+
+    #barreDidentite ul{
+        text-align:center;
+        font-size: 0.8em;
+        
+    }
+    
+    #barreDidentite li{
+    list-style: none;
+    margin-right: 4%;
+    
+    
+    }
+    
+    #barreDidentite img{
+        width:10%;
+        text-align: center;
+    }
+    
+    .nomPrenom{
+        text-decoration: none;
+        color :black;
+    }
+    
+    .nomPrenom:hover {
+        border-bottom:1px solid black;
+    }
+    
+    
+    
+     /*Déconnexion */
+    
+    
+     .deconnexion{
+        text-decoration: none;
+        color :black;
+        font-size:0.8em;
+        
+    }
+    
+    .deconnexion:hover{
+        border-bottom: 1px solid black;
+    }
+    
+    #deconnexion {
+       text-align: right;
+       margin-right: 2%;
+       margin-top:2%;
+       padding-bottom: 2%;
+        
+       
+    }
+}
+   
+
 
  /* Titre h1 */
     #formulaireDeConnexion h1, #formulaireDinscription h1, #formulaireMotDePasse h1, #mentionsLegales h1, #contact h1, #modificationMotDePasse h1, #modificationQuestion h1{

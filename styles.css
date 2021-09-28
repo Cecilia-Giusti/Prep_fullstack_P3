@@ -144,7 +144,7 @@ body {
 
 
     /* Design des boutons */
-    #submit, .inscription ,.modification, .boutonCommentaire{
+    #submit, .inscription ,.modification{
         background-color: #ed1e24;
         color:white;
         border-radius: 5px;
@@ -156,7 +156,7 @@ body {
         margin:2%;
     }
 
-    #submit:hover, .boutonCommentaire:hover, .inscription:hover{
+    #submit:hover, .boutonCommentaire:hover, .inscription:hover, .like:hover{
         background-color: #333;
         transition-duration: 0.5s;
         transition-property: background-color;
@@ -412,14 +412,43 @@ body {
                 
                 
             }
+
+            #menuCommentaire input {
+                width: 20%;
+
+            }
             
 
-            .inputCommentaire {
-                margin-left:5%;
-                width:70%;
+            .like{
+                background-color: #ed1e24;
+                color:white;
+                border-radius: 5px;
+                border:none;
+                width:8%;
+                padding: 0.5%;
+                margin:1%;
+                text-align: center;
+                
                 
             }
 
+            .like a {
+                text-decoration: none;
+                color:black;
+                text-align: center;
+            }
+
+            .boutonCommentaire {
+                background-color: #ed1e24;
+                color:white;
+                border-radius: 5px;
+                border:none;
+                width:8%;
+                padding:1%;
+                margin:1%;
+            }
+
+         
             
 
            /* Design des commentaires*/

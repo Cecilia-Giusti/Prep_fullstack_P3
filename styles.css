@@ -1,757 +1,802 @@
 
-/* Sur tous types d'écrans orientés verticalement */
-@media all {
+/* Style de toutes les pages pour tous les écrans par defaut */
+    @media all {
 
-/* Styles de base */
+    /* Styles de base */
 
-/* Body*/
+    /* Body*/
 
-body {
-    background-color: #F3F3F3;
-    width: 100%;
-    font-family: Arial, Helvetica, sans-serif;
-    margin:0px;
-}
-
- 
-/* Header */
-
-
-    /* Nav*/
-
-    nav {
-        background-color: white;
-        width:100%;
-        margin-top:-2%;
-        
-    }
-
-    #logo_GBAF img{
-        width:10%;
-        margin-left: 5%}
-
-/* Titre h1 */
-#formulaireDeConnexion h1, #formulaireDinscription h1, #formulaireMotDePasse h1, #mentionsLegales h1, #contact h1, #modificationMotDePasse h1, #modificationQuestion h1{
-    text-align : center;
-    font-size: 2em;
-    margin-bottom:10%;
-}
-
-/* Formulaire de connexion */
-
-#formulaireDeConnexion, #formulaireMotDePasse, #contact, #modificationMotDePasse {
-background-color: white;
-margin : auto;
-width: 25%;
-padding: 2%;
-margin-top:5%;
-margin-bottom :5%;
-
-}
-
-
-
-/*Marge à gauche des divers éléments*/
-#connexion, #margeMotDePasse, #contactNous {
-    margin-left: 20%;
-}
-
-/* Mise en page des labels */
-.label {
-    padding-top: 2%;
-    padding-bottom:2%;
-    margin-top:4%;
-}
-
-
-/* Mise en forme des cases d'insertion*/
-#name, #password,#prenom, #userName, #question, #reponse, #email, #objet, #message {
-    background-color: #e5e5e5;
-    box-shadow: inset 1px 3px 5px #c2c1c1;
-    border:none;
-    padding-top:2%;
-    padding-bottom:2%;
-    padding-right: 20%;
-    
-}
-
-input:focus{
-    outline:  none;
-}
-
-/* Design du mot de passe oublié */
-#connexion a {
-    text-decoration: none;
-    color:black;
-    font-size: 0.8em;
-    
-}
-
-#connexion a:hover{
-    border-bottom: 1px solid black;
-}
-
-#motDePasseOublie {
-    margin-bottom:15%;
-}
-
-
-/* Design des boutons */
-#submit, .inscription ,.modification{
-    background-color: #ed1e24;
-    color:white;
-    border-radius: 5px;
-    border:none;
-    padding-top:2.5%;
-    padding-bottom:2.5%;
-    padding-left:6%;
-    padding-right:6%;
-    margin:2%;
-}
-
-#submit:hover, .boutonCommentaire:hover, .inscription:hover, .like:hover{
-    background-color: #333;
-    transition-duration: 0.5s;
-    transition-property: background-color;
-}
-
-.submit, #inscription, #modification, .lirePlus {
-    text-align: center;
-    width: 80%;
-}
-
-/* Design du formulaire d'inscription*/
-#formulaireDinscription {
-    background-color: white;
-    margin : auto;
-    width: 45%;
-    padding: 2%;
-    margin-top:5%;
-    margin-bottom :5%;
-}
-
-#reponse {
-    margin-bottom:5%;
-}
-
-#messageInscription{
-    font-size:0.8em;
-    margin-top:5%;
-}
-
-#retourConnexion{
-    text-align:right;
-    margin-top:5%;
-}
-
-#retourConnexion a{
-    text-decoration: none;
-    color:black;
-    font-size: 0.8em;
-}
-
-#retourConnexion a:hover{
-    border-bottom:1px solid black;
-}
-
-#margeinscription{
-    margin-left: 25%;
-}
-
-/* Design de la page paramètre du compte*/
-
-.messageParametres {
-    font-size: 0.8em;
-}
-
-.motDePasseOublie a, .Retour a{
-    text-decoration: none;
-    color:black;
-    font-size: 0.8em;
-    padding-top:1%;
-}
-
-.motDePasseOublie a:hover, .Retour a:hover{
-    border-bottom:1px solid black;
-}
-
-.modification:hover{
-    background-color: #333;
-    transition-duration: 0.5s;
-    transition-property: background-color;
-    
-}
-
-#modification{
-    margin-bottom:5%;
-    margin-top:5%;
-}
-
-
-/* Design des mentions légales */
-#mentionsLegales {
-    background-color: white;
-    margin : auto;
-    width: 65%;
-    padding: 2%;
-    margin-top:5%;
-    margin-bottom :5%;
-    
-}
-
-#mentionsLegales p {
-    font-size: 0.8em;
-    text-align:justify;
-}
-
-/*Message*/
-
-#message {
-    margin-bottom: 10%;
-    height: 100px;
-    
-    
-}
-
-/* Modification de la question secète*/
-
-#modificationQuestion {
-    background-color: white;
-    margin : auto;
-    width: 40%;
-    padding: 2%;
-    margin-top:5%;
-    margin-bottom :5%;
-    
-}
-
-/* Page d'accueil */
-
-    /* en tête */
-
-    #entete {
-        width : 100%;
-       position: relative;
-        text-align: center;
-        margin-top:-1.2%;
-        
-    }
-
-    #entete img {
-        width:100%;
-        
-    }
-    #GBAF {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color:#ffffff88;
-        padding:8%;
-      }
-    
-      #GBAF p {
-          text-align : justify;
-      }
-
-
-      #texteActeurs {
-        background-color: white;
-        margin : auto;
+    body {
+        background-color: #F3F3F3;
         width: 100%;
-       padding-top:2%;
-       padding-bottom:2%;       
-      }
+        font-family: Arial, Helvetica, sans-serif;
+        margin:0px;
+    }
 
-      #texteActeurs h2 {
+    
+    /* Header */
+
+
+        /* Nav*/
+
+        nav {
+            background-color: white;
+            width:100%;
+            margin-top:-2%;
+            
+        }
+
+        #logo_GBAF img{
+            width:10%;
+            margin-left: 5%}
+
+    /* Titre h1 */
+    #formulaireDeConnexion h1, #formulaireDinscription h1, #formulaireMotDePasse h1, #mentionsLegales h1, #contact h1, #modificationMotDePasse h1, #modificationQuestion h1{
         text-align : center;
         font-size: 2em;
+        margin-bottom:10%;
+    }
+
+    /* Formulaire de connexion */
+
+    #formulaireDeConnexion, #formulaireMotDePasse, #contact, #modificationMotDePasse {
+    background-color: white;
+    margin : auto;
+    width: 25%;
+    padding: 2%;
+    margin-top:5%;
+    margin-bottom :5%;
+
+    }
+
+
+
+    /*Marge à gauche des divers éléments*/
+    #connexion, #margeMotDePasse, #contactNous {
+        margin-left: 20%;
+    }
+
+    /* Mise en page des labels */
+    .label {
+        padding-top: 2%;
+        padding-bottom:2%;
+        margin-top:4%;
+    }
+
+
+    /* Mise en forme des cases d'insertion*/
+    #name, #password,#prenom, #userName, #question, #reponse, #email, #objet, #message {
+        background-color: #e5e5e5;
+        box-shadow: inset 1px 3px 5px #c2c1c1;
+        border:none;
+        padding-top:2%;
+        padding-bottom:2%;
+        padding-right: 20%;
         
-      }
-
-      #texteActeurs p {
-        text-align:justify;
-        padding-left:8%;
-        padding-right:8%;
-
-      }
-
-
-      /*Design des articles dans la page d'accueil */
-
-     
-      article{
-        background-color: white;
-        margin : auto;
-        width: 60%;
-        padding :2%;
-        margin-top :2%;
-
-        display :flex;
-        flex-direction: row;
-        flex-wrap:nowrap;
-        justify-content: flex-start;
-      }
-
-     
-
-      article img {
-          width :30%;
-          border: 1px solid black;
-          margin-right:2%;
-          
-      }
-
-      .paragraphe {
-          width:100%;
-      }
-
-         /*Bouton*/
-
-            .lirePlus  {
-                
-                align-self: flex-end;
-            }
-
-
-    /* Design de la page acteurs etpartenaires*/
-    
-    #acteurPartenaire {
-        background-color: white;
-        margin : auto;
-        width: 80%;
-        padding :2%;
-        margin-top :2%;
-        margin:auto;
-        text-align:center;
     }
 
-    #acteurPartenaire img {
-        width:50%;
-        border: 1px solid black;
+    input:focus{
+        outline:  none;
     }
 
-
-    #acteurPartenaire p {
-        width:60%;
-        margin:auto;
-    }
-
-        /*Design de la partie des commentaires */
-
-        #commentaire {
-        background-color: white;
-        width: 80%;
-        padding: 2%;
-        margin:auto;
-        
-
-        }  
-        
-        #menuCommentaire {
-            display:flex;
-            flex-wrap: nowrap;
-            justify-content: flex-end;
-            align-items: center;
-            margin:auto;
-            width:85%;
-            
-            
-        }
-
-        #menuCommentaire p {
-            width:40%;
-            margin-left:30%;
-            
-            
-        }
-
-        #menuCommentaire input {
-            width: 20%;
-
-        }
-        
-
-        .like{
-            background-color: #ed1e24;
-            color:white;
-            border-radius: 5px;
-            border:none;
-            width:8%;
-            padding: 0.5%;
-            margin:1%;
-            text-align: center;
-            
-            
-        }
-
-        .like a {
-            text-decoration: none;
-            color:black;
-            text-align: center;
-        }
-
-        .boutonCommentaire {
-            background-color: #ed1e24;
-            color:white;
-            border-radius: 5px;
-            border:none;
-            width:8%;
-            padding:1%;
-            margin:1%;
-        }
-
-     
-        
-
-       /* Design des commentaires*/
-
-       #commentaire article {
-           display: flex;
-           flex-direction: column;
-
-           background-color: #e5e5e5;
-           width:80%;
-           
-       }
-
-
-
-/* Design du footer*/
-
-footer {
-   background-color: #333;
-   color:white;
-} 
-
-#menuFooter li{
-   list-style: none;
-   text-align:center;
-   display:inline;
-   font-size:0.8em;
-   margin:auto;
-}
-
-#menuFooter ul{
-   text-align:center;
-padding-top:2%;
-}
-
-#menuFooter a{
-   text-decoration: none;
-   color:white;
-}
-
-
-
-}
-
-
-
-    
-@media all and (max-device-width: 900px) {
-
-    /* Header */
-
-
-        /* Nav*/
-        nav {
-            background-color: white;
-            width:100%;
-            margin-top:-4%;
-            text-align: center;
-            
-        }
-
-        #logo_GBAF img{
-            width:15%;
-            padding-top:2%;
-            
-        }
-
-}
-
-
-
-
-@media all and (max-device-width: 500px){
-
-    /* Header */
-
-
-        /* Nav*/
-
-        nav {
-            background-color: white;
-            width:100%;
-            margin-top:-5%;
-            
-        }
-
-        #logo_GBAF img{
-            width:15%;
-            margin-left: 5%;
-            padding-top:2%;
-        }
-}
-
-@media all and (min-width: 1300px) {
-
-    /* Barre d'identité */
-
-    #barreDidentite ul{
-        text-align:right;
-        margin-right:2%;
-        margin-top:-150px;
-        padding-bottom:100px;
-    }
-
-    #barreDidentite li{
-    list-style: none;
-    display:inline-block;
-    }
-
-    #barreDidentite img{
-        width:50%;
-    }
-
-    .nomPrenom{
+    /* Design du mot de passe oublié */
+    #connexion a {
         text-decoration: none;
-        color :black;
-    }
-
-    .nomPrenom:hover {
-        border-bottom:1px solid black;
-    }
-
-     /*Déconnexion */
-
-
-     .deconnexion{
-        text-decoration: none;
-        color :black;
-        font-size:0.8em;
-        position:relative;
-        top:-100px;
-    }
-
-    .deconnexion:hover{
-        border-bottom: 1px solid black;
-    }
-
-    #deconnexion {
-        text-align: right;
-        margin-right:2%;
-    }
-
-
-}
-
-@media all and (min-width:901px) and  (max-width: 1300px) {
-
-    /* Barre d'identité */
-
-    #barreDidentite ul{
-        text-align:right;
-        margin-right:2%;
-        margin-top:-100px;
-        
-    }
-
-    #barreDidentite li{
-    list-style: none;
-    display:inline-block;
-    }
-
-    #barreDidentite img{
-        width:50%;
-    }
-
-    .nomPrenom{
-        text-decoration: none;
-        color :black;
-    }
-
-    .nomPrenom:hover {
-        border-bottom:1px solid black;
-    }
-
-    #deconnexion{
-        margin-top:100px;
-    }
-
-    /*Déconnexion */
-
-
-    .deconnexion{
-        text-decoration: none;
-        color :black;
-        font-size:0.8em;
-        position:relative;
-        top:-100px;
-    }
-
-    .deconnexion:hover{
-        border-bottom: 1px solid black;
-    }
-
-    #deconnexion {
-        text-align: right;
-        margin-right:2%;
-    }
-
-
-}
-
-@media all and (max-device-width: 900px) and (min-device-width:501px){
-
-    /* Barre d'identité */
-
-    #barreDidentite ul{
-        text-align:center;
-
-        
-    }
-
-    #barreDidentite li{
-    list-style: none;
-    display:inline-block;
-
-    }
-
-    #barreDidentite img{
-        width:50%;
-    }
-
-    .nomPrenom{
-        text-decoration: none;
-        color :black;
-    }
-
-    .nomPrenom:hover {
-        border-bottom:1px solid black;
-    }
-
-
-
-    /*Déconnexion */
-
-
-    .deconnexion{
-        text-decoration: none;
-        color :black;
-        font-size:0.8em;
-        
-    }
-
-    .deconnexion:hover{
-        border-bottom: 1px solid black;
-    }
-
-    #deconnexion {
-    text-align: right;
-    margin-right: 2%;
-    margin-top:2%;
-    padding-bottom: 2%;
-        
-    
-    }
-}
-
-@media all and (max-device-width: 500px) {
-
- 
-
-    #barreDidentite ul{
-        text-align:center;
+        color:black;
         font-size: 0.8em;
         
     }
-    
-    #barreDidentite li{
-    list-style: none;
-    margin-right: 4%;
-    
-    
-    }
-    
-    #barreDidentite img{
-        width:10%;
-        text-align: center;
-    }
-    
-    .nomPrenom{
-        text-decoration: none;
-        color :black;
-    }
-    
-    .nomPrenom:hover {
-        border-bottom:1px solid black;
-    }
-    
-    
-    
-     /*Déconnexion */
-    
-    
-     .deconnexion{
-        text-decoration: none;
-        color :black;
-        font-size:0.8em;
-        
-    }
-    
-    .deconnexion:hover{
+
+    #connexion a:hover{
         border-bottom: 1px solid black;
     }
+
+    #motDePasseOublie {
+        margin-bottom:15%;
+    }
+
+
+    /* Design des boutons */
+    #submit, .inscription ,.modification{
+        background-color: #ed1e24;
+        color:white;
+        border-radius: 5px;
+        border:none;
+        padding-top:2.5%;
+        padding-bottom:2.5%;
+        padding-left:6%;
+        padding-right:6%;
+        margin:2%;
+    }
+
+    #submit:hover, .boutonCommentaire:hover, .inscription:hover, .like:hover{
+        background-color: #333;
+        transition-duration: 0.5s;
+        transition-property: background-color;
+    }
+
+    .submit, #inscription, #modification, .lirePlus {
+        text-align: center;
+        width: 80%;
+    }
+
+    /* Design du formulaire d'inscription*/
+    #formulaireDinscription {
+        background-color: white;
+        margin : auto;
+        width: 45%;
+        padding: 2%;
+        margin-top:5%;
+        margin-bottom :5%;
+    }
+
+    #reponse {
+        margin-bottom:5%;
+    }
+
+    #messageInscription{
+        font-size:0.8em;
+        margin-top:5%;
+    }
+
+    #retourConnexion{
+        text-align:right;
+        margin-top:5%;
+    }
+
+    #retourConnexion a{
+        text-decoration: none;
+        color:black;
+        font-size: 0.8em;
+    }
+
+    #retourConnexion a:hover{
+        border-bottom:1px solid black;
+    }
+
+    #margeinscription{
+        margin-left: 25%;
+    }
+
+    /* Design de la page paramètre du compte*/
+
+    .messageParametres {
+        font-size: 0.8em;
+    }
+
+    .motDePasseOublie a, .Retour a{
+        text-decoration: none;
+        color:black;
+        font-size: 0.8em;
+        padding-top:1%;
+    }
+
+    .motDePasseOublie a:hover, .Retour a:hover{
+        border-bottom:1px solid black;
+    }
+
+    .modification:hover{
+        background-color: #333;
+        transition-duration: 0.5s;
+        transition-property: background-color;
+        
+    }
+
+    #modification{
+        margin-bottom:5%;
+        margin-top:5%;
+    }
+
+
+    /* Design des mentions légales */
+    #mentionsLegales {
+        background-color: white;
+        margin : auto;
+        width: 65%;
+        padding: 2%;
+        margin-top:5%;
+        margin-bottom :5%;
+        
+    }
+
+    #mentionsLegales p {
+        font-size: 0.8em;
+        text-align:justify;
+    }
+
+    /*Message*/
+
+    #message {
+        margin-bottom: 10%;
+        height: 100px;
+        
+        
+    }
+
+    /* Modification de la question secète*/
+
+    #modificationQuestion {
+        background-color: white;
+        margin : auto;
+        width: 40%;
+        padding: 2%;
+        margin-top:5%;
+        margin-bottom :5%;
+        
+    }
+
+    /* Page d'accueil */
+
+        /* en tête */
+
+        #entete {
+            width : 100%;
+        position: relative;
+            text-align: center;
+            margin-top:-1.2%;
+            
+        }
+
+        #entete img {
+            width:100%;
+            
+        }
+        #GBAF {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color:#ffffff88;
+            padding:8%;
+        }
+        
+        #GBAF p {
+            text-align : justify;
+        }
+
+
+        #texteActeurs {
+            background-color: white;
+            margin : auto;
+            width: 100%;
+        padding-top:2%;
+        padding-bottom:2%;       
+        }
+
+        #texteActeurs h2 {
+            text-align : center;
+            font-size: 2em;
+            
+        }
+
+        #texteActeurs p {
+            text-align:justify;
+            padding-left:8%;
+            padding-right:8%;
+
+        }
+
+
+        /*Design des articles dans la page d'accueil */
+
+        
+        article{
+            background-color: white;
+            margin : auto;
+            width: 60%;
+            padding :2%;
+            margin-top :2%;
+
+            display :flex;
+            flex-direction: row;
+            flex-wrap:nowrap;
+            justify-content: flex-start;
+        }
+
+        
+
+        article img {
+            width :30%;
+            border: 1px solid black;
+            margin-right:2%;
+            
+        }
+
+        .paragraphe {
+            width:100%;
+        }
+
+            /*Bouton*/
+
+                .lirePlus  {
+                    
+                    align-self: flex-end;
+                }
+
+
+        /* Design de la page acteurs etpartenaires*/
+        
+        #acteurPartenaire {
+            background-color: white;
+            margin : auto;
+            width: 80%;
+            padding :2%;
+            margin-top :2%;
+            margin:auto;
+            text-align:center;
+        }
+
+        #acteurPartenaire img {
+            width:50%;
+            border: 1px solid black;
+        }
+
+
+        #acteurPartenaire p {
+            width:60%;
+            margin:auto;
+        }
+
+            /*Design de la partie des commentaires */
+
+            #commentaire {
+            background-color: white;
+            width: 80%;
+            padding: 2%;
+            margin:auto;
+            
+
+            }  
+            
+            #menuCommentaire {
+                display:flex;
+                flex-wrap: nowrap;
+                justify-content: flex-end;
+                align-items: center;
+                margin:auto;
+                width:85%;
+                
+                
+            }
+
+            #menuCommentaire p {
+                width:40%;
+                margin-left:30%;
+                
+                
+            }
+
+            #menuCommentaire input {
+                width: 20%;
+
+            }
+            
+
+            .like{
+                background-color: #ed1e24;
+                color:white;
+                border-radius: 5px;
+                border:none;
+                width:8%;
+                padding: 0.5%;
+                margin:1%;
+                text-align: center;
+                
+                
+            }
+
+            .like a {
+                text-decoration: none;
+                color:black;
+                text-align: center;
+            }
+
+            .boutonCommentaire {
+                background-color: #ed1e24;
+                color:white;
+                border-radius: 5px;
+                border:none;
+                width:8%;
+                padding:1%;
+                margin:1%;
+            }
+
+        
+            
+
+        /* Design des commentaires*/
+
+        #commentaire article {
+            display: flex;
+            flex-direction: column;
+
+            background-color: #e5e5e5;
+            width:80%;
+            
+        }
+
+
+
+    /* Design du footer*/
+
+    footer {
+    background-color: #333;
+    color:white;
+    } 
+
+    #menuFooter li{
+    list-style: none;
+    text-align:center;
+    display:inline;
+    font-size:0.8em;
+    margin:auto;
+    }
+
+    #menuFooter ul{
+    text-align:center;
+    padding-top:2%;
+    }
+
+    #menuFooter a{
+    text-decoration: none;
+    color:white;
+    }
+
+
+
+    }
+
+
+
+/* Style & responsive du header et du footer pour les différents écrans */    
+    @media all and (max-device-width: 900px) {
+
+        /* Header */
+
+
+            /* Nav*/
+            nav {
+                background-color: white;
+                width:100%;
+                margin-top:-4%;
+                text-align: center;
+                
+            }
+
+            #logo_GBAF img{
+                width:15%;
+                padding-top:2%;
+                
+            }
+
+    }
+
+
+    @media all and (max-device-width: 500px){
+
+        /* Header */
+
+
+            /* Nav*/
+
+            nav {
+                background-color: white;
+                width:100%;
+                margin-top:-5%;
+                
+            }
+
+            #logo_GBAF img{
+                width:15%;
+                margin-left: 5%;
+                padding-top:2%;
+            }
+    }
+
+    @media all and (min-width: 1300px) {
+
+        /* Barre d'identité */
+
+        #barreDidentite ul{
+            text-align:right;
+            margin-right:2%;
+            margin-top:-150px;
+            padding-bottom:100px;
+        }
+
+        #barreDidentite li{
+        list-style: none;
+        display:inline-block;
+        }
+
+        #barreDidentite img{
+            width:50%;
+        }
+
+        .nomPrenom{
+            text-decoration: none;
+            color :black;
+        }
+
+        .nomPrenom:hover {
+            border-bottom:1px solid black;
+        }
+
+        /*Déconnexion */
+
+
+        .deconnexion{
+            text-decoration: none;
+            color :black;
+            font-size:0.8em;
+            position:relative;
+            top:-100px;
+        }
+
+        .deconnexion:hover{
+            border-bottom: 1px solid black;
+        }
+
+        #deconnexion {
+            text-align: right;
+            margin-right:2%;
+        }
+
+
+    }
+
+    @media all and (min-width:901px) and  (max-width: 1300px) {
+
+        /* Barre d'identité */
+
+        #barreDidentite ul{
+            text-align:right;
+            margin-right:2%;
+            margin-top:-100px;
+            
+        }
+
+        #barreDidentite li{
+        list-style: none;
+        display:inline-block;
+        }
+
+        #barreDidentite img{
+            width:50%;
+        }
+
+        .nomPrenom{
+            text-decoration: none;
+            color :black;
+        }
+
+        .nomPrenom:hover {
+            border-bottom:1px solid black;
+        }
+
+        #deconnexion{
+            margin-top:100px;
+        }
+
+        /*Déconnexion */
+
+
+        .deconnexion{
+            text-decoration: none;
+            color :black;
+            font-size:0.8em;
+            position:relative;
+            top:-100px;
+        }
+
+        .deconnexion:hover{
+            border-bottom: 1px solid black;
+        }
+
+        #deconnexion {
+            text-align: right;
+            margin-right:2%;
+        }
+
+
+    }
+
+    @media all and (max-device-width: 900px) and (min-device-width:501px){
+
+        /* Barre d'identité */
+
+        #barreDidentite ul{
+            text-align:center;
+
+            
+        }
+
+        #barreDidentite li{
+        list-style: none;
+        display:inline-block;
+
+        }
+
+        #barreDidentite img{
+            width:50%;
+        }
+
+        .nomPrenom{
+            text-decoration: none;
+            color :black;
+        }
+
+        .nomPrenom:hover {
+            border-bottom:1px solid black;
+        }
+
+
+
+        /*Déconnexion */
+
+
+        .deconnexion{
+            text-decoration: none;
+            color :black;
+            font-size:0.8em;
+            
+        }
+
+        .deconnexion:hover{
+            border-bottom: 1px solid black;
+        }
+
+        #deconnexion {
+        text-align: right;
+        margin-right: 2%;
+        margin-top:2%;
+        padding-bottom: 2%;
+            
+        
+        }
+    }
+
+    @media all and (max-device-width: 500px) {
+
     
-    #deconnexion {
-       text-align: right;
-       margin-right: 2%;
-       margin-top:2%;
-       padding-bottom: 2%;
+
+        #barreDidentite ul{
+            text-align:center;
+            font-size: 0.8em;
+            
+        }
         
-       
-    }
-}
-
-
-@media all and (max-width: 1300px) and (min-width : 1000px) {
-   /* Titre h1 */
-    #formulaireDeConnexion h1, #formulaireDinscription h1, #formulaireMotDePasse h1, #mentionsLegales h1, #contact h1, #modificationMotDePasse h1, #modificationQuestion h1{
-        text-align : center;
-        font-size: 1.8em;
-        margin-bottom:10%;
-    }
-
-    /* Mise en forme des cases d'insertion*/
-    #name, #password,#prenom, #userName, #question, #reponse, #email, #objet, #message {
-        background-color: #e5e5e5;
-        box-shadow: inset 1px 3px 5px #c2c1c1;
-        border:none;
-        padding-top:2%;
-        padding-bottom:2%;
-        padding-right: 10%;
+        #barreDidentite li{
+        list-style: none;
+        margin-right: 4%;
         
+        
+        }
+        
+        #barreDidentite img{
+            width:10%;
+            text-align: center;
+        }
+        
+        .nomPrenom{
+            text-decoration: none;
+            color :black;
+        }
+        
+        .nomPrenom:hover {
+            border-bottom:1px solid black;
+        }
+        
+        
+        
+        /*Déconnexion */
+        
+        
+        .deconnexion{
+            text-decoration: none;
+            color :black;
+            font-size:0.8em;
+            
+        }
+        
+        .deconnexion:hover{
+            border-bottom: 1px solid black;
+        }
+        
+        #deconnexion {
+        text-align: right;
+        margin-right: 2%;
+        margin-top:2%;
+        padding-bottom: 2%;
+            
+        
+        }
     }
-}
 
-@media all and (max-width: 1000px) and (min-width :850px) {
-      /* Titre h1 */
-      #formulaireDeConnexion h1, #formulaireDinscription h1, #formulaireMotDePasse h1, #mentionsLegales h1, #contact h1, #modificationMotDePasse h1, #modificationQuestion h1{
-        text-align : center;
-        font-size: 1.5em;
-        margin-bottom:10%;
+
+
+
+/* Style & responsive des pages Connexion, ... pour les différents écrans */   
+    @media all and (max-width: 1300px) and (min-width : 1000px) {
+    /* Titre h1 */
+        #formulaireDeConnexion h1, #formulaireDinscription h1, #formulaireMotDePasse h1, #mentionsLegales h1, #contact h1, #modificationMotDePasse h1, #modificationQuestion h1{
+            text-align : center;
+            font-size: 1.8em;
+            margin-bottom:10%;
+        }
+
+        /* Mise en forme des cases d'insertion*/
+        #name, #password,#prenom, #userName, #question, #reponse, #email, #objet, #message {
+            background-color: #e5e5e5;
+            box-shadow: inset 1px 3px 5px #c2c1c1;
+            border:none;
+            padding-top:2%;
+            padding-bottom:2%;
+            padding-right: 10%;
+            
+        }
     }
 
-    /* Mise en forme des cases d'insertion*/
-    #name, #password,#prenom, #userName, #question, #reponse, #email, #objet, #message {
-        background-color: #e5e5e5;
-        box-shadow: inset 1px 3px 5px #c2c1c1;
-        border:none;
-        padding-top:2%;
+    @media all and (max-width: 1000px) and (min-width :850px) {
+        /* Titre h1 */
+        #formulaireDeConnexion h1, #formulaireDinscription h1, #formulaireMotDePasse h1, #mentionsLegales h1, #contact h1, #modificationMotDePasse h1, #modificationQuestion h1{
+            text-align : center;
+            font-size: 1.5em;
+            margin-bottom:10%;
+        }
+
+        /* Mise en forme des cases d'insertion*/
+        #name, #password,#prenom, #userName, #question, #reponse, #email, #objet, #message {
+            background-color: #e5e5e5;
+            box-shadow: inset 1px 3px 5px #c2c1c1;
+            border:none;
+            padding-top:2%;
+            padding-bottom:2%;
+            padding-right: 2%;
+        }
+
+        #formulaireDeConnexion, #formulaireMotDePasse, #contact, #modificationMotDePasse {
+            background-color: white;
+            margin : auto;
+            width: 40%;
+            padding: 2%;
+            margin-top:5%;
+            margin-bottom :5%;
+            
+            }
+            
+
+    }
+
+    @media all and (max-width: 850px) and (min-width:600px){
+        /* Titre h1 */
+        #formulaireDeConnexion h1, #formulaireDinscription h1, #formulaireMotDePasse h1, #mentionsLegales h1, #contact h1, #modificationMotDePasse h1, #modificationQuestion h1{
+            text-align : center;
+            font-size: 1.2em;
+            margin-bottom:10%;
+        }
+
+        /* Mise en forme des cases d'insertion*/
+        #name, #password,#prenom, #userName, #question, #reponse, #email, #objet, #message {
+            background-color: #e5e5e5;
+            box-shadow: inset 1px 3px 5px #c2c1c1;
+            border:none;
+            padding-top:2%;
+            padding-bottom:2%;
+            width:60%;
+        }
+
+
+        /* Mise en page des labels */
+    .label {
+        padding-top: 2%;
         padding-bottom:2%;
-        padding-right: 2%;
+        margin-top:4%;
+        font-size: 0.8em;
+    }
+
+    #motDePasseOublie {
+        font-size: 0.8em;
     }
 
     #formulaireDeConnexion, #formulaireMotDePasse, #contact, #modificationMotDePasse {
@@ -763,106 +808,17 @@ padding-top:2%;
         margin-bottom :5%;
         
         }
-        
 
-}
-
-@media all and (max-width: 850px) and (min-width:600px){
-    /* Titre h1 */
-    #formulaireDeConnexion h1, #formulaireDinscription h1, #formulaireMotDePasse h1, #mentionsLegales h1, #contact h1, #modificationMotDePasse h1, #modificationQuestion h1{
-        text-align : center;
-        font-size: 1.2em;
-        margin-bottom:10%;
     }
 
-    /* Mise en forme des cases d'insertion*/
-    #name, #password,#prenom, #userName, #question, #reponse, #email, #objet, #message {
-        background-color: #e5e5e5;
-        box-shadow: inset 1px 3px 5px #c2c1c1;
-        border:none;
-        padding-top:2%;
-        padding-bottom:2%;
-        width:60%;
-    }
-
-
-    /* Mise en page des labels */
-.label {
-    padding-top: 2%;
-    padding-bottom:2%;
-    margin-top:4%;
-    font-size: 0.8em;
-}
-
-#motDePasseOublie {
-    font-size: 0.8em;
-}
-
-#formulaireDeConnexion, #formulaireMotDePasse, #contact, #modificationMotDePasse {
-    background-color: white;
-    margin : auto;
-    width: 40%;
-    padding: 2%;
-    margin-top:5%;
-    margin-bottom :5%;
-    
-    }
-
-}
-
-@media all and (max-width: 600px) and (min-width :500px) {
-       /* Titre h1 */
-       #formulaireDeConnexion h1, #formulaireDinscription h1, #formulaireMotDePasse h1, #mentionsLegales h1, #contact h1, #modificationMotDePasse h1, #modificationQuestion h1{
-        text-align : center;
-        font-size: 1em;
-        margin-bottom:10%;
-    }
-
-    /* Mise en forme des cases d'insertion*/
-    #name, #password,#prenom, #userName, #question, #reponse, #email, #objet, #message {
-        background-color: #e5e5e5;
-        box-shadow: inset 1px 3px 5px #c2c1c1;
-        border:none;
-        padding-top:2%;
-        padding-bottom:2%;
-        width:60%;
-    }
-
-
-    /* Mise en page des labels */
-.label {
-    padding-top: 2%;
-    padding-bottom:2%;
-    margin-top:4%;
-    font-size: 0.6em;
-}
-
-#motDePasseOublie {
-    font-size: 0.5em;
-}
-
-#formulaireDeConnexion, #formulaireMotDePasse, #contact, #modificationMotDePasse {
-    background-color: white;
-    margin : auto;
-    width: 40%;
-    padding: 2%;
-    margin-top:5%;
-    margin-bottom :5%;
-    
-    }
-
-}
-
-
-@media all and (max-width: 500px) and (min-width:400px){
-
-          /* Titre h1 */
-          #formulaireDeConnexion h1, #formulaireDinscription h1, #formulaireMotDePasse h1, #mentionsLegales h1, #contact h1, #modificationMotDePasse h1, #modificationQuestion h1{
+    @media all and (max-width: 600px) and (min-width :500px) {
+        /* Titre h1 */
+        #formulaireDeConnexion h1, #formulaireDinscription h1, #formulaireMotDePasse h1, #mentionsLegales h1, #contact h1, #modificationMotDePasse h1, #modificationQuestion h1{
             text-align : center;
-            font-size: 0.8em;
+            font-size: 1em;
             margin-bottom:10%;
         }
-    
+
         /* Mise en forme des cases d'insertion*/
         #name, #password,#prenom, #userName, #question, #reponse, #email, #objet, #message {
             background-color: #e5e5e5;
@@ -872,8 +828,8 @@ padding-top:2%;
             padding-bottom:2%;
             width:60%;
         }
-    
-    
+
+
         /* Mise en page des labels */
     .label {
         padding-top: 2%;
@@ -881,56 +837,30 @@ padding-top:2%;
         margin-top:4%;
         font-size: 0.6em;
     }
-    
+
     #motDePasseOublie {
         font-size: 0.5em;
     }
 
+    #formulaireDeConnexion, #formulaireMotDePasse, #contact, #modificationMotDePasse {
+        background-color: white;
+        margin : auto;
+        width: 40%;
+        padding: 2%;
+        margin-top:5%;
+        margin-bottom :5%;
+        
+        }
 
-    /* Design des boutons */
-#submit, .inscription ,.modification{
-    background-color: #ed1e24;
-    color:white;
-    border-radius: 5px;
-    border:none;
-    padding-top:2.5%;
-    padding-bottom:2.5%;
-    padding-left:6%;
-    padding-right:6%;
-    margin:2%;
-    font-size: 0.7em;
-}
-
-#submit:hover, .boutonCommentaire:hover, .inscription:hover, .like:hover{
-    background-color: #333;
-    transition-duration: 0.5s;
-    transition-property: background-color;
-}
-
-.submit, #inscription, #modification, .lirePlus {
-    text-align: center;
-    width: 80%;
-    
-    
-}
-
-#formulaireDeConnexion, #formulaireMotDePasse, #contact, #modificationMotDePasse {
-    background-color: white;
-    margin : auto;
-    width: 40%;
-    padding: 2%;
-    margin-top:5%;
-    margin-bottom :5%;
-    
     }
 
-}
 
-@media all and (max-width: 400px) {
-              /* Titre h1 */
-              #formulaireDeConnexion h1, #formulaireDinscription h1, #formulaireMotDePasse h1, #mentionsLegales h1, #contact h1, #modificationMotDePasse h1, #modificationQuestion h1{
+    @media all and (max-width: 500px) and (min-width:400px){
+
+            /* Titre h1 */
+            #formulaireDeConnexion h1, #formulaireDinscription h1, #formulaireMotDePasse h1, #mentionsLegales h1, #contact h1, #modificationMotDePasse h1, #modificationQuestion h1{
                 text-align : center;
-                font-size: 0.6em;
+                font-size: 0.8em;
                 margin-bottom:10%;
             }
         
@@ -950,14 +880,14 @@ padding-top:2%;
             padding-top: 2%;
             padding-bottom:2%;
             margin-top:4%;
-            font-size: 0.5em;
+            font-size: 0.6em;
         }
         
         #motDePasseOublie {
             font-size: 0.5em;
         }
-    
-    
+
+
         /* Design des boutons */
     #submit, .inscription ,.modification{
         background-color: #ed1e24;
@@ -971,13 +901,13 @@ padding-top:2%;
         margin:2%;
         font-size: 0.7em;
     }
-    
+
     #submit:hover, .boutonCommentaire:hover, .inscription:hover, .like:hover{
         background-color: #333;
         transition-duration: 0.5s;
         transition-property: background-color;
     }
-    
+
     .submit, #inscription, #modification, .lirePlus {
         text-align: center;
         width: 80%;
@@ -985,20 +915,100 @@ padding-top:2%;
         
     }
 
-    /* Formulaire de connexion */
+    #formulaireDeConnexion, #formulaireMotDePasse, #contact, #modificationMotDePasse {
+        background-color: white;
+        margin : auto;
+        width: 40%;
+        padding: 2%;
+        margin-top:5%;
+        margin-bottom :5%;
+        
+        }
 
-#formulaireDeConnexion, #formulaireMotDePasse, #contact, #modificationMotDePasse {
-    background-color: white;
-    margin : auto;
-    width: 40%;
-    padding: 2%;
-    margin-top:5%;
-    margin-bottom :5%;
-    
     }
 
+    @media all and (max-width: 400px) {
+                /* Titre h1 */
+                #formulaireDeConnexion h1, #formulaireDinscription h1, #formulaireMotDePasse h1, #mentionsLegales h1, #contact h1, #modificationMotDePasse h1, #modificationQuestion h1{
+                    text-align : center;
+                    font-size: 0.6em;
+                    margin-bottom:10%;
+                }
+            
+                /* Mise en forme des cases d'insertion*/
+                #name, #password,#prenom, #userName, #question, #reponse, #email, #objet, #message {
+                    background-color: #e5e5e5;
+                    box-shadow: inset 1px 3px 5px #c2c1c1;
+                    border:none;
+                    padding-top:2%;
+                    padding-bottom:2%;
+                    width:60%;
+                }
+            
+            
+                /* Mise en page des labels */
+            .label {
+                padding-top: 2%;
+                padding-bottom:2%;
+                margin-top:4%;
+                font-size: 0.5em;
+            }
+            
+            #motDePasseOublie {
+                font-size: 0.5em;
+            }
+        
+        
+            /* Design des boutons */
+        #submit, .inscription ,.modification{
+            background-color: #ed1e24;
+            color:white;
+            border-radius: 5px;
+            border:none;
+            padding-top:2.5%;
+            padding-bottom:2.5%;
+            padding-left:6%;
+            padding-right:6%;
+            margin:2%;
+            font-size: 0.7em;
+        }
+        
+        #submit:hover, .boutonCommentaire:hover, .inscription:hover, .like:hover{
+            background-color: #333;
+            transition-duration: 0.5s;
+            transition-property: background-color;
+        }
+        
+        .submit, #inscription, #modification, .lirePlus {
+            text-align: center;
+            width: 80%;
+            
+            
+        }
+
+        /* Formulaire de connexion */
+
+    #formulaireDeConnexion, #formulaireMotDePasse, #contact, #modificationMotDePasse {
+        background-color: white;
+        margin : auto;
+        width: 60%;
+        padding: 2%;
+        margin-top:5%;
+        margin-bottom :5%;
+        
+        }
+
+    }
+
+
+/* Style & responsive de la page Contact pour les différents écrans */   
+@media all and (max-width: 1000px) {
+    #contactNous {
+        margin-left: 30%;
+    }
 }
-   
+
+    
 
 
 

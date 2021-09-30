@@ -11,6 +11,7 @@
         width: 100%;
         font-family: Arial, Helvetica, sans-serif;
         margin:0px;
+        font-size:1em;
     }
 
     
@@ -1422,38 +1423,67 @@
 
 /* Style & Responsive de la page :Modifier la question secrète pour les différents écrans */
 
-@media all and (max-width: 600px) and (min-width:400px){
-    .retour {
-        font-size:0.8em;
+    @media all and (max-width: 600px) and (min-width:400px){
+        .retour {
+            font-size:0.8em;
+        }
+
+        #modificationQuestion {
+            background-color: white;
+            margin : auto;
+            width: 60%;
+            padding: 2%;
+            margin-top:5%;
+            margin-bottom :5%;
+            
+        }
     }
 
-    #modificationQuestion {
-        background-color: white;
-        margin : auto;
-        width: 60%;
-        padding: 2%;
-        margin-top:5%;
-        margin-bottom :5%;
+    @media all and (max-width: 400px) {
+        .retour {
+            font-size:0.8em;
+        }
+
+        #modificationQuestion {
+            background-color: white;
+            margin : auto;
+            width: 65%;
+            padding: 2%;
+            margin-top:5%;
+            margin-bottom :5%;
+            
+        }
+    }
+
+
+/* Style & Responsive de la page de mot de passe pour les différents écrans */
+
+
+    @media all and (max-width: 500px) {
+    #modification {
+            text-align: center;
+            width: 90%;
+        }
+
+        .modification 
+            {
+                background-color: #ed1e24;
+                color:white;
+                border-radius: 5px;
+                border:none;
+                padding-top:2.5%;
+                padding-bottom:2.5%;
+                padding-left:6%;
+                padding-right:6%;
+                margin:2%;
+            
+                font-size: 1.8em;
+            }
         
-    }
-}
 
-@media all and (max-width: 400px) {
-    .retour {
-        font-size:0.8em;
     }
 
-    #modificationQuestion {
-        background-color: white;
-        margin : auto;
-        width: 65%;
-        padding: 2%;
-        margin-top:5%;
-        margin-bottom :5%;
-        
-    }
-}
-
+ 
 
 
 

@@ -226,6 +226,16 @@
         
     }
 
+    .retour a {
+        text-decoration: none;
+        color:black;
+        font-size:0.8em;
+    }
+
+    .retour a:hover {
+       border-bottom:1px solid black;
+    }
+
     /* Page d'accueil */
 
         /* en tête */
@@ -1407,6 +1417,47 @@
             
     }
     }
+
+
+
+/* Style & Responsive de la page :Modifier la question secrète pour les différents écrans */
+
+@media all and (max-width: 600px) and (min-width:400px){
+    .retour {
+        font-size:0.8em;
+    }
+
+    #modificationQuestion {
+        background-color: white;
+        margin : auto;
+        width: 60%;
+        padding: 2%;
+        margin-top:5%;
+        margin-bottom :5%;
+        
+    }
+}
+
+@media all and (max-width: 400px) {
+    .retour {
+        font-size:0.8em;
+    }
+
+    #modificationQuestion {
+        background-color: white;
+        margin : auto;
+        width: 65%;
+        padding: 2%;
+        margin-top:5%;
+        margin-bottom :5%;
+        
+    }
+}
+
+
+
+
+
 
 
 

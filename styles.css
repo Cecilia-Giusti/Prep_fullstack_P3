@@ -137,6 +137,7 @@
     #messageInscription{
         font-size:0.8em;
         margin-top:5%;
+        width:70%;
     }
 
     #retourConnexion{
@@ -1002,11 +1003,307 @@
 
 
 /* Style & responsive de la page Contact pour les différents écrans */   
-@media all and (max-width: 1000px) {
-    #contactNous {
-        margin-left: 30%;
+    @media all and (max-width: 1000px) {
+        #contactNous {
+            margin-left: 30%;
+        }
     }
+
+/* Style & Responsive de la page d'inscription pour les différents écrans */
+
+@media all and (max-width: 1100px) and (min-width :800px) {
+/* Design du formulaire d'inscription*/
+#formulaireDinscription {
+    background-color: white;
+    margin : auto;
+    width: 45%;
+    padding: 2%;
+    margin-top:5%;
+    margin-bottom :5%;
 }
+
+#reponse {
+    margin-bottom:5%;
+}
+
+#messageInscription{
+    font-size:0.7em;
+    margin-top:5%;
+    width:70%;
+}
+
+#retourConnexion{
+    text-align:right;
+    margin-top:5%;
+}
+
+#retourConnexion a{
+    text-decoration: none;
+    color:black;
+    font-size: 0.8em;
+}
+
+#retourConnexion a:hover{
+    border-bottom:1px solid black;
+}
+
+#margeinscription{
+    margin-left: 25%;
+}
+
+}
+
+@media all and (max-width: 800px) and (min-width:650px) {
+    /* Design du formulaire d'inscription*/
+    #formulaireDinscription {
+        background-color: white;
+        margin : auto;
+        width: 45%;
+        padding: 2%;
+        margin-top:5%;
+        margin-bottom :5%;
+    }
+    
+    #reponse {
+        margin-bottom:5%;
+    }
+    
+    #messageInscription{
+        font-size:0.6em;
+        margin-top:5%;
+        width:80%;
+    }
+    
+    #retourConnexion{
+        text-align:right;
+        margin-top:5%;
+    }
+    
+    #retourConnexion a{
+        text-decoration: none;
+        color:black;
+        font-size: 0.8em;
+    }
+    
+    #retourConnexion a:hover{
+        border-bottom:1px solid black;
+    }
+    
+    #margeinscription{
+        margin-left: 25%;
+    }
+    
+    }
+
+@media all and (max-width: 650px) and (min-width:500px) {
+    /* Design du formulaire d'inscription*/
+    #formulaireDinscription {
+        background-color: white;
+        margin : auto;
+        width: 45%;
+        padding: 2%;
+        margin-top:5%;
+        margin-bottom :5%;
+    }
+    
+    #reponse {
+        margin-bottom:5%;
+    }
+    
+    #messageInscription{
+        font-size:0.6em;
+        margin-top:5%;
+        width:80%;
+    }
+    
+    #retourConnexion{
+        text-align:right;
+        margin-top:5%;
+    }
+    
+    #retourConnexion a{
+        text-decoration: none;
+        color:black;
+        font-size: 0.6em;
+    }
+    
+    #retourConnexion a:hover{
+        border-bottom:1px solid black;
+    }
+    
+    #margeinscription{
+        margin-left: 25%;
+    }
+
+    #formulaireDinscription {
+        background-color: white;
+        margin : auto;
+        width: 60%;
+        padding: 2%;
+        margin-top:5%;
+        margin-bottom :5%;
+    }
+    
+    }
+
+@media all and (max-width: 500px) and (min-width:400px) {
+    /* Design du formulaire d'inscription*/
+    #formulaireDinscription {
+        background-color: white;
+        margin : auto;
+        width: 45%;
+        padding: 2%;
+        margin-top:5%;
+        margin-bottom :5%;
+    }
+    
+    #reponse {
+        margin-bottom:5%;
+    }
+    
+    #messageInscription{
+        font-size:0.5em;
+        margin-top:5%;
+        width:80%;
+    }
+    
+    #retourConnexion{
+        text-align:right;
+        margin-top:5%;
+    }
+    
+    #retourConnexion a{
+        text-decoration: none;
+        color:black;
+        font-size: 0.6em;
+    }
+    
+    #retourConnexion a:hover{
+        border-bottom:1px solid black;
+    }
+    
+    #margeinscription{
+        margin-left: 25%;
+    }
+
+    #formulaireDinscription {
+        background-color: white;
+        margin : auto;
+        width: 60%;
+        padding: 2%;
+        margin-top:5%;
+        margin-bottom :5%;
+    }
+    
+    }
+
+@media all and (max-width: 400px) and (min-width:300px) {
+    /* Design du formulaire d'inscription*/
+    #formulaireDinscription {
+        background-color: white;
+        margin : auto;
+        width: 45%;
+        padding: 2%;
+        margin-top:5%;
+        margin-bottom :5%;
+    }
+    
+    #reponse {
+        margin-bottom:5%;
+    }
+    
+    #messageInscription{
+        font-size:0.4em;
+        margin-top:5%;
+        width:80%;
+    }
+    
+    #retourConnexion{
+        text-align:right;
+        margin-top:5%;
+    }
+    
+    #retourConnexion a{
+        text-decoration: none;
+        color:black;
+        font-size: 0.5em;
+    }
+    
+    #retourConnexion a:hover{
+        border-bottom:1px solid black;
+    }
+    
+    #margeinscription{
+        margin-left: 25%;
+    }
+
+    #formulaireDinscription {
+        background-color: white;
+        margin : auto;
+        width: 60%;
+        padding: 2%;
+        margin-top:5%;
+        margin-bottom :5%;
+    }
+    
+    }
+
+@media all and (max-width: 300px) {
+    /* Design du formulaire d'inscription*/
+    #formulaireDinscription {
+        background-color: white;
+        margin : auto;
+        width: 45%;
+        padding: 2%;
+        margin-top:5%;
+        margin-bottom :5%;
+    }
+    
+    #reponse {
+        margin-bottom:5%;
+    }
+    
+    #messageInscription{
+        font-size:0.4em;
+        margin-top:5%;
+        width:80%;
+    }
+    
+    #retourConnexion{
+        text-align:right;
+        margin-top:5%;
+    }
+    
+    #retourConnexion a{
+        text-decoration: none;
+        color:black;
+        font-size: 0.3em;
+        
+    }
+    
+    #retourConnexion a:hover{
+        border-bottom:1px solid black;
+    }
+    
+    #margeinscription{
+        margin-left: 25%;
+    }
+
+    #formulaireDinscription {
+        background-color: white;
+        margin : auto;
+        width: 60%;
+        padding: 2%;
+        margin-top:5%;
+        margin-bottom :5%;
+    }
+    
+    }
+    
+    
+    
+    
+    
 
     
 

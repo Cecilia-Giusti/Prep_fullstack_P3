@@ -1830,14 +1830,147 @@
 
 
 
+    /* Style & Responsive de la page index pour les tablettes entre 1024px et 500px */
 
-    /* Style & Responsive de la page index pour les tablettes 1024px à 500px */
-    @media all and (max-width: 1024px) {
+    @media all and (max-width: 1024px) and (min-width:500px){
+        article{
+            background-color: white;
+            margin : auto;
+            width: 95%;
+            padding :2%;
+            margin-top :2%;
+
+            display :flex;
+            flex-direction: row;
+            flex-wrap:nowrap;
+            justify-content: flex-start;
+        }
+
+        
+        article img {
+            width :40%;
+            border: 1px solid black;
+            margin-right:2%;
+            
+        }
+    }
+    @media all and (max-width: 1024px) and (min-width:600px){
+        #GBAF {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color:#ffffff88;
+            padding-top:2%;
+            padding-bottom:2%;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+    }
+
+    @media all and (max-width: 600px) and (min-width:500px){
+        #GBAF {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color:#ffffff88;
+            padding-top:2%;
+            padding-bottom:2%;
+            padding-left: 5%;
+            padding-right: 5%;
+            font-size: 0.9em;
+            width:60%;
+        }
+    }
+
+    
+
+
+
+    
+    /* Style & Responsive de la page index pour les smartphones à partir de 500px */
+
+    @media all and (max-width: 500px){
+        /*Design des articles dans la page d'accueil */
+
+        
+        article{
+            background-color: white;
+            margin : auto;
+            width: 80%;
+            padding :2%;
+            margin-top :2%;
+
+            display :flex;
+            flex-direction: column;
+            flex-wrap:nowrap;
+            justify-content: flex-start;
+        }
+
+        
+
+        article img {
+            width :90%;
+            border: 1px solid black;
+            margin:auto;
+            
+        }
+
+        .paragraphe {
+            width:100%;
+            
+        }
+
+        #texteActeurs{
+            font-size: 0.8em;
+        }
+
+
+
+            /*Bouton*/
+
+                .lirePlus  {
+                    align-self: flex-end;
+                    text-align:right;
+                }
 
     }
 
+    @media all and (max-width: 500px) and (min-width:290px) {
+        #GBAF {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color:#ffffff4b;
+            padding-top:2%;
+            padding-bottom:2%;
+            padding-left: 5%;
+            padding-right: 5%;
+            font-size: 0.8em;
+            width:80%;
+        }
+    }
 
-    /* Style & Responsive de la page index pour les smartphones à partir de 500px */
+    @media all and (max-width: 290px) {
+        #GBAF {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color:#ffffff4b;
+            
+            padding-top:0%;
+            padding-bottom:0%;
+            padding-left: 5%;
+            padding-right: 5%;
+            font-size: 0.6em;
+            width:90%;
+        }
+    }
+
+
 
 
 

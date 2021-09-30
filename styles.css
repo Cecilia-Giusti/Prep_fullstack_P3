@@ -450,50 +450,6 @@
 
 
 /* Style & responsive du header et du footer pour les différents écrans */    
-    @media all and (max-device-width: 900px) {
-
-        /* Header */
-
-
-            /* Nav*/
-            nav {
-                background-color: white;
-                width:100%;
-                margin-top:-4%;
-                text-align: center;
-                
-            }
-
-            #logo_GBAF img{
-                width:15%;
-                padding-top:2%;
-                
-            }
-
-    }
-
-
-    @media all and (max-device-width: 500px){
-
-        /* Header */
-
-
-            /* Nav*/
-
-            nav {
-                background-color: white;
-                width:100%;
-                margin-top:-5%;
-                
-            }
-
-            #logo_GBAF img{
-                width:15%;
-                margin-left: 5%;
-                padding-top:2%;
-            }
-    }
-
     @media all and (min-width: 1300px) {
 
         /* Barre d'identité */
@@ -602,12 +558,34 @@
 
     }
 
+    @media all and (max-device-width: 900px) {
+
+        /* Header */
+
+
+            /* Nav*/
+            nav {
+                background-color: white;
+                width:100%;
+                margin-top:-4%;
+                text-align: center;
+                
+            }
+
+            #logo_GBAF img{
+                width:15%;
+                padding-top:2%;
+                
+            }
+
+    }
     @media all and (max-device-width: 900px) and (min-device-width:501px){
 
         /* Barre d'identité */
 
         #barreDidentite ul{
             text-align:center;
+            
 
             
         }
@@ -655,6 +633,27 @@
             
         
         }
+    }
+
+    @media all and (max-device-width: 500px) and (min-device-width :300px){
+
+        /* Header */
+
+
+            /* Nav*/
+
+            nav {
+                background-color: white;
+                width:100%;
+                margin-top:-6%;
+                
+            }
+
+            #logo_GBAF img{
+                width:15%;
+                margin-left: 5%;
+                padding-top:2%;
+            }
     }
 
     @media all and (max-device-width: 500px) {
@@ -713,6 +712,29 @@
         
         }
     }
+
+
+    @media all and (max-device-width: 300px) {
+                /* Header */
+
+
+            /* Nav*/
+
+            nav {
+                background-color: white;
+                width:100%;
+                margin-top:-8%;
+                
+            }
+
+            #logo_GBAF img{
+                width:15%;
+                margin-left: 10%;
+                padding-top:2%;
+            }
+    }
+
+    
 
 
 
@@ -1385,6 +1407,9 @@
             
     }
     }
+
+
+
 
 
 

@@ -339,7 +339,7 @@
         }
 
         #acteurPartenaire img {
-            width:50%;
+            width:70%;
             border: 1px solid black;
         }
 
@@ -366,9 +366,7 @@
                 justify-content: flex-end;
                 align-items: center;
                 margin:auto;
-                width:85%;
-                
-                
+                width:85%;  
             }
 
             #menuCommentaire p {
@@ -1486,9 +1484,6 @@
  
 /* Style & Responsive de la page paramètres pour les différents écrans */
 
-/* Design de la page paramètre du compte*/
-
-
     @media all and (max-width: 1200px) and (min-width:850px) {
         .messageParametres {
             font-size: 0.8em;
@@ -1543,6 +1538,318 @@
         }
 
     }
+
+
+
+/* Style & Responsive de la page partenaires pour les différents écrans */
+    @media all and (max-width: 700px) and (min-width:550px) {
+        #menuCommentaire p {
+            margin-right:1%;
+        }
+
+        #menuCommentaire {
+            display:flex;
+            flex-wrap: nowrap;
+            justify-content: flex-end;
+            align-items: center;
+            margin-right:8%;
+            width:90%;  
+        }
+
+        #menuCommentaire p {
+            width:30%;
+            font-size:0.9em;
+            margin-left:15%;
+        }
+
+        .like{
+            background-color: #ed1e24;
+            color:white;
+            border-radius: 5px;
+            border:none;
+            width:8%;
+            padding: 0.5%;
+            margin:1%;
+            text-align: center;
+            
+            
+        }
+
+        #acteurPartenaire img {
+            width:80%;
+            border: 1px solid black;
+        }
+
+        
+    }
+
+
+    @media all and (max-width: 550px) and (min-width:480px) {
+        #menuCommentaire p {
+            margin-right:1%;
+        }
+
+        #menuCommentaire {
+            display:flex;
+            flex-wrap: nowrap;
+            justify-content:center;
+            align-items: center;
+            margin:auto;
+              
+        }
+
+        .like{
+            background-color: #ed1e24;
+            color:white;
+            border-radius: 5px;
+            border:none;
+            width:8%;
+            padding: 0.5%;
+            margin:1%;
+            text-align: center;
+            
+            
+        }
+
+        .boutonCommentaire {
+            background-color: #ed1e24;
+            color:white;
+            border-radius: 5px;
+            border:none;
+            width:50%;
+            padding:2%;
+           
+            margin:1%;
+        }
+
+        #menuCommentaire p {
+            width:30%;
+            font-size:0.9em;
+            margin-left:2%;
+        }
+
+        #menuCommentaire input {
+            width: 25%;
+            
+
+        }
+
+        #acteurPartenaire img {
+            width:80%;
+            border: 1px solid black;
+        }
+    }
+
+    @media all and (max-width: 480px) and (min-width:390px) {
+        #menuCommentaire p {
+            margin-right:1%;
+        }
+
+        #menuCommentaire {
+            display:flex;
+            flex-wrap: nowrap;
+            justify-content:center;
+            align-items: center;
+            margin:auto;
+              
+        }
+
+        .like{
+            background-color: #ed1e24;
+            color:white;
+            border-radius: 5px;
+            border:none;
+            width:10%;
+            padding: 0.5%;
+            margin:1%;
+            text-align: center;
+            
+            
+        }
+
+        .boutonCommentaire {
+            background-color: #ed1e24;
+            color:white;
+            border-radius: 5px;
+            border:none;
+            width:50%;
+            padding:2%;
+            margin:1%;
+        }
+
+        #menuCommentaire p {
+            width:30%;
+            font-size:0.7em;
+            margin-left:1%;
+        }
+
+        #menuCommentaire input {
+            width: 30%;
+            
+
+        }
+
+        #acteurPartenaire img {
+            width:85%;
+            border: 1px solid black;
+        }
+    }
+
+    @media all and (max-width: 390px) and (min-width:300px){
+        #menuCommentaire p {
+            margin-right:1%;
+        }
+
+        #menuCommentaire {
+            display:flex;
+            flex-wrap: nowrap;
+            justify-content:center;
+            align-items: center;
+            margin:auto;
+              
+        }
+
+        .like{
+            background-color: #ed1e24;
+            color:white;
+            border-radius: 5px;
+            border:none;
+            width:10%;
+            padding: 0.5%;
+            margin:1%;
+            text-align: center;
+            
+            
+        }
+
+        .boutonCommentaire {
+            background-color: #ed1e24;
+            color:white;
+            border-radius: 5px;
+            border:none;
+            width:90%;
+            padding:2%;
+            margin:1%;
+        }
+
+        #menuCommentaire p {
+            width:30%;
+            font-size:0.7em;
+            margin-left:1px;
+        }
+
+        #menuCommentaire input {
+            width: 33%;
+        }
+
+        #commentaire {
+            background-color: white;
+            width: 90%;
+            padding: 2%;
+            margin:auto;
+            
+
+            }  
+
+            #acteurPartenaire {
+                background-color: white;
+                margin : auto;
+                width: 90%;
+                padding :2%;
+                margin-top :2%;
+                margin:auto;
+                text-align:center;
+            }
+
+            #acteurPartenaire img {
+                width:90%;
+                border: 1px solid black;
+            }
+    }
+
+    @media all and (max-width: 300px){
+        #menuCommentaire p {
+            margin-right:1%;
+        }
+
+        #menuCommentaire {
+            display:flex;
+            flex-wrap: wrap;
+            justify-content:center;
+            align-items: center;
+            
+              
+        }
+
+        .like{
+            background-color: #ed1e24;
+            color:white;
+            border-radius: 5px;
+            border:none;
+            width:40%;
+            padding: 0.5%;
+            margin:1%;
+            text-align: center;
+            
+            
+        }
+
+        .boutonCommentaire {
+            background-color: #ed1e24;
+            color:white;
+            border-radius: 5px;
+            border:none;
+            width:95%;
+            padding:2%;
+            margin-left:1%;
+            font-size: 0.7em;
+        }
+
+        #menuCommentaire p {
+            width:40%;
+            font-size:0.7em;
+            margin-left:1px;
+        }
+
+        #menuCommentaire input {
+            width: 40%;
+        }
+
+        #commentaire {
+            background-color: white;
+            width: 95%;
+            padding: 1%;
+            margin:auto;
+            
+
+            }  
+
+            #acteurPartenaire {
+                background-color: white;
+                margin : auto;
+                width: 95%;
+                padding :2%;
+                margin-top :2%;
+                margin:auto;
+                text-align:center;
+            }
+
+            #acteurPartenaire img {
+                width:90%;
+                border: 1px solid black;
+            }
+    }
+
+    @media all and (max-width: 700px){
+        article p {
+            font-size:0.8em;
+        }
+    }
+
+
+
+
+
 
 
 

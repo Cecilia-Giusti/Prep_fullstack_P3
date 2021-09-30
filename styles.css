@@ -98,7 +98,7 @@
 
 
     /* Design des boutons */
-    #submit, .inscription ,.modification{
+    #submit, .inscription ,.modification, .modifier{
         background-color: #ed1e24;
         color:white;
         border-radius: 5px;
@@ -110,7 +110,7 @@
         margin:2%;
     }
 
-    #submit:hover, .boutonCommentaire:hover, .inscription:hover, .like:hover{
+    #submit:hover, .boutonCommentaire:hover, .inscription:hover, .like:hover, .modifier:hover{
         background-color: #333;
         transition-duration: 0.5s;
         transition-property: background-color;
@@ -1484,6 +1484,67 @@
     }
 
  
+/* Style & Responsive de la page paramètres pour les différents écrans */
+
+/* Design de la page paramètre du compte*/
+
+
+    @media all and (max-width: 1200px) and (min-width:850px) {
+        .messageParametres {
+            font-size: 0.8em;
+            width:70%;
+        }
+
+    }
+
+    @media all and (max-width: 850px) and (min-width:700px) {
+        .messageParametres {
+            font-size: 0.9em;
+            width:75%;
+        }
+
+    }
+
+    @media all and (max-width: 700px) and (min-width:500px) {
+        .messageParametres {
+            font-size: 0.9em;
+            width:85%;
+        }
+
+    }
+
+
+    @media all and (max-width: 500px) and(min-width:300px){
+        .messageParametres {
+            font-size: 1em;
+            width:90%;
+        }
+
+        .motDePasseOublie a, .Retour a{
+            text-decoration: none;
+            color:black;
+            font-size: 0.7em;
+            padding-top:1%;
+        }
+
+    }
+
+    @media all and (max-width: 300px){
+        .messageParametres {
+            font-size: 1em;
+            width:90%;
+        }
+
+        .motDePasseOublie a, .Retour a{
+            text-decoration: none;
+            color:black;
+            font-size: 0.5em;
+            padding-top:1%;
+        }
+
+    }
+
+
 
 
 

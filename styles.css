@@ -295,7 +295,7 @@
         article{
             background-color: white;
             margin : auto;
-            width: 60%;
+            width: 80%;
             padding :2%;
             margin-top :2%;
 
@@ -511,14 +511,14 @@
 
     }
 
-    @media all and (min-width:901px) and  (max-width: 1300px) {
+    @media all and (max-width: 1300px) and (min-width:900px){
 
         /* Barre d'identité */
 
         #barreDidentite ul{
             text-align:right;
             margin-right:2%;
-            margin-top:-100px;
+            margin-top:-90px;
             
         }
 
@@ -567,42 +567,19 @@
 
     }
 
-    @media all and (max-device-width: 900px) {
-
-        /* Header */
-
-
-            /* Nav*/
-            nav {
-                background-color: white;
-                width:100%;
-                margin-top:-4%;
-                text-align: center;
-                
-            }
-
-            #logo_GBAF img{
-                width:15%;
-                padding-top:2%;
-                
-            }
-
-    }
-    @media all and (max-device-width: 900px) and (min-device-width:501px){
-
+    @media all and (max-width: 900px) and (min-width:500px) {
         /* Barre d'identité */
 
         #barreDidentite ul{
-            text-align:center;
-            
-
+            text-align:right;
+            margin-right:2%;
+            margin-top:-50px;
             
         }
 
         #barreDidentite li{
         list-style: none;
         display:inline-block;
-
         }
 
         #barreDidentite img{
@@ -618,7 +595,9 @@
             border-bottom:1px solid black;
         }
 
-
+        #deconnexion{
+            margin-top:100px;
+        }
 
         /*Déconnexion */
 
@@ -627,7 +606,8 @@
             text-decoration: none;
             color :black;
             font-size:0.8em;
-            
+            position:relative;
+            top:-100px;
         }
 
         .deconnexion:hover{
@@ -635,35 +615,35 @@
         }
 
         #deconnexion {
-        text-align: right;
-        margin-right: 2%;
-        margin-top:2%;
-        padding-bottom: 2%;
-            
-        
+            text-align: right;
+            margin-right:2%;
         }
+
+
     }
 
-    @media all and (max-device-width: 500px) and (min-device-width :300px){
+    @media all and (max-device-width: 500px) {
 
         /* Header */
 
 
             /* Nav*/
-
             nav {
                 background-color: white;
                 width:100%;
                 margin-top:-6%;
+                text-align: center;
                 
             }
 
             #logo_GBAF img{
                 width:15%;
-                margin-left: 5%;
                 padding-top:2%;
+                margin-left: 5%;
             }
+
     }
+
 
     @media all and (max-device-width: 500px) {
 
@@ -1583,7 +1563,6 @@
         
     }
 
-
     @media all and (max-width: 550px) and (min-width:480px) {
         #menuCommentaire p {
             margin-right:1%;
@@ -1846,6 +1825,19 @@
         }
     }
 
+
+/* Style & Responsive de la page index pour les différents écrans */
+
+
+
+
+    /* Style & Responsive de la page index pour les tablettes 1024px à 500px */
+    @media all and (max-width: 1024px) {
+
+    }
+
+
+    /* Style & Responsive de la page index pour les smartphones à partir de 500px */
 
 
 

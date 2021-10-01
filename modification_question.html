@@ -23,9 +23,9 @@
           <!-- Nom & prénom s'il y a connexion-->
           <div id="barreDidentite">
             <ul> 
-            <li><img src="images_web/icone_identite.png" alt="Image identite"/></li>
-            <li><a class="nomPrenom" href="parametres.html"> Nom & Prénom <a></li>
-          </ul>
+              <li><img src="images_web/icone_identite.png" alt="Image identite"/></li>
+              <li><a class="nomPrenom" href="parametres.html"> Nom & Prénom <a></li>
+            </ul>
           </div>
           <!--Deconnexion s'il y a connexion -->
           <div id="deconnexion">
@@ -39,40 +39,36 @@
       <section id="modificationQuestion">
           <form action="inscription_post.php" method="post">
             
-            <h1> Modification de la question secrète</h1>
-              <div id="margeMotDePasse">
+            <h1> Modifier la question secrète</h1>
+            <div id="margeMotDePasse">
+              <div class="label">
+                <label for="password">Mot de passe :</label>
+              </div>
+              <div class="emplacement">
+                <input type="text" id="password" name="password" required >
+              </div>
 
-                <div class="label">
-                  <label for="password">Mot de passe :</label>
-                </div>
-                <div class="emplacement">
-                  <input type="text" id="password" name="password" required >
-                </div>
+              <div class="label">
+                <label for="question">Nouvelle question secrète :</label>
+              </div>
+              <div class="emplacement">
+                <input type="text" id="question" name="quesionSecrete" required >
+              </div>
 
-                <div class="label">
-                    <label for="question">Nouvelle question secrète :</label>
-                  </div>
-                  <div class="emplacement">
-                    <input type="text" id="question" name="quesionSecrete" required >
-                  </div>
-  
-                  <div class="label">
-                    <label for="reponse">Réponse :</label>
-                  </div>
-                  <div class="emplacement">
-                    <input type="text" id="reponse" name="UserName" required >
-                  </div>
+              <div class="label">
+                <label for="reponse">Réponse :</label>
+              </div>
+              <div class="emplacement">
+                <input type="text" id="reponse" name="UserName" required >
+              </div>
 
-                <div id="modification">
-                  <input class="modification" type="button" value="Modifier">
-                </div>
+              <div id="modification">
+                <input class="modification" type="button" value="Modifier">
+              </div>
 
-                <div class="Retour">
-                  <i><a href="index.html">Retour </a> </i>
-                  </div>
-
-           
-
+              <div class="retour">
+                <i><a href="index.html">Retour </a> </i>
+              </div>
               </div>
           </form>
         

@@ -457,7 +457,6 @@
     }
 
 
-
 /* Style & responsive du header et du footer pour les différents écrans */    
     @media all and (min-width: 1300px) {
 
@@ -724,10 +723,6 @@
     }
 
     
-
-
-
-
 /* Style & responsive des pages Connexion, ... pour les différents écrans */   
     @media all and (max-width: 1300px) and (min-width : 1000px) {
     /* Titre h1 */
@@ -1312,7 +1307,6 @@
         }
 
 
-
 /* Style & Responsive de la page des mentions légales pour les différents écrans */
 
     @media all and (max-width: 1300px) and (min-width:900px) {
@@ -1396,7 +1390,6 @@
             
     }
     }
-
 
 
 /* Style & Responsive de la page :Modifier la question secrète pour les différents écrans */
@@ -1828,8 +1821,6 @@
 
 /* Style & Responsive de la page index pour les différents écrans */
 
-
-
     /* Style & Responsive de la page index pour les tablettes entre 1024px et 500px */
 
     @media all and (max-width: 1024px) and (min-width:500px){
@@ -1883,10 +1874,6 @@
             width:60%;
         }
     }
-
-    
-
-
 
     
     /* Style & Responsive de la page index pour les smartphones à partir de 500px */

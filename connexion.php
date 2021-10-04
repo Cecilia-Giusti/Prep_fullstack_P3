@@ -50,7 +50,7 @@
               </div>
 
               <div id="motDePasseOublie">
-                <i><a href="motDePasse.html">Mot de passe oublié ? </a> </i>
+                <i><a href="motDePasse.php">Mot de passe oublié ? </a> </i>
               </div>
 
               <div class="submit">
@@ -58,7 +58,7 @@
               </div>  
 
               <div id="inscription">
-                <input onclick="window.location.href='inscription.html'" class="inscription" type="button" value="Inscription"/>
+                <input onclick="window.location.href='inscription.php'" class="inscription" type="button" value="Inscription"/>
               </div>
 
             </div>
@@ -72,7 +72,7 @@
         <div id="menuFooter">
           <ul>
             <Li>|<a href="mentionslegales.html"> Mentions Légales </a>|</Li>
-            <li><a href="contact.html">Contact </a>|</li>
+            <li><a href="contact.php">Contact </a>|</li>
           </ul>
         </div>
       </footer>

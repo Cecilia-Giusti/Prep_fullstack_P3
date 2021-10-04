@@ -88,7 +88,7 @@
               </div>
           </form>
         <div id="retourConnexion">
-          <i><a href="connexion.html">J'ai déjà un compte ? Je me connecte</a></i>
+          <i><a href="connexion.php">J'ai déjà un compte ? Je me connecte</a></i>
         </div>
       </section> 
 
@@ -97,8 +97,8 @@
       <footer>
         <div id="menuFooter">
           <ul>
-            <Li>|<a href="mentionslegales.html"> Mentions Légales </a>|</Li>
-            <li><a href="contact.html">Contact </a>|</li>
+            <Li>|<a href="mentionslegales.php"> Mentions Légales </a>|</Li>
+            <li><a href="contact.php">Contact </a>|</li>
           </ul>
         </div>
       </footer>

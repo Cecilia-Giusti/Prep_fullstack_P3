@@ -1,3 +1,12 @@
+
+<?php
+// On démarre la session AVANT d'écrire du code HTML
+session_start();
+
+?>
+
+
+
 <!DOCTYPE html>
 <html>
 
@@ -19,18 +28,24 @@
           <div id="logo_GBAF">
             <img src="images_web/logo_fonbblanc.png" alt="Logo GBAF" />
           </div>
+<?php 
+if (isset($_SESSION['name']) AND isset($_SESSION['firstname'])){
 
+?>
           <!-- Nom & prénom s'il y a connexion-->
           <div id="barreDidentite">
             <ul> 
+                
               <li><img src="images_web/icone_identite.png" alt="Image identite"/></li>
-              <li><a class="nomPrenom" href="parametres.php"> Nom & Prénom <a></li>
+              <li><a class="nomPrenom" href="parametres.php"> <?php echo $_SESSION['name'] . ' ' . $_SESSION['firstname']; ?> <a></li>
             </ul>
           </div>
           <!--Deconnexion s'il y a connexion -->
           <div id="deconnexion">
-            <a class="deconnexion" href="connexion.html">Déconnexion</a>
+            <a class="deconnexion" href="connexion.php">Déconnexion <?php session_destroy()?></a>
           </div>
-
+<?php          
+}
+?>
         </nav>
       </header>

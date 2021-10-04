@@ -25,7 +25,7 @@ catch (Exception $e)
 
 
 // Données de la base de données
-$req = $bdd->prepare('SELECT id, password FROM users WHERE username = :username');
+$req = $bdd->prepare('SELECT * FROM users WHERE username = :username');
 $req->execute(array(
     'username' => $_POST['username'], 
     ));
@@ -44,7 +44,10 @@ else
     if ($isPasswordCorrect) {
         session_start();
         $_SESSION['id'] = $resultat['id'];
+        $_SESSION['name'] = $resultat['name'];
+        $_SESSION['firstname'] = $resultat['firstname'];
         $_SESSION['username'] = $_POST['username'];
+
        // Redirection
         header('Location: index.php');
     }

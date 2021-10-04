@@ -18,6 +18,9 @@ catch (Exception $e)
         die('Erreur : ' . $e->getMessage());
 }
 
+// Hachage du mot de passe
+$pass_hache = password_hash($_POST['password'], PASSWORD_DEFAULT);
+
 
 // Insertion du message à l'aide d'une requête préparée
 $req = $bdd->prepare('INSERT INTO users (name, firstname, username, password, question, answer) VALUES(?,?,?,?,?,?)');
@@ -25,7 +28,7 @@ $req->execute(array(
     $_POST['name'], 
     $_POST['firstname'],
     $_POST['username'],
-    $_POST['password'],
+    $pass_hache,
     $_POST['question'],
     $_POST['answer']
 ));

@@ -25,16 +25,16 @@ $pass_hache = password_hash($_POST['password'], PASSWORD_DEFAULT);
 // Insertion du message à l'aide d'une requête préparée
 $req = $bdd->prepare('INSERT INTO users (name, firstname, username, password, question, answer) VALUES(?,?,?,?,?,?)');
 $req->execute(array(
-    $_POST['name'], 
-    $_POST['firstname'],
-    $_POST['username'],
+    $_POST['name'],
+    $_POST['firstname'] ,
+    $_POST['username'] ,
     $pass_hache,
     $_POST['question'],
     $_POST['answer']
 ));
 
 
-// Puis rediriger vers minichat.php comme ceci :
+// Redirection
 header('Location: connexion.php');
 ?>
     

@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="styles.css"/>
   </head>
 
+  <?php
+// Sous MAMP
+$bdd = new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'root', 'root');
+?>
+
 <body>     
   <div id="container">  
     <!-- Header  -->
@@ -38,28 +43,28 @@
                   <label for="name">Nom :</label>
                 </div>
                 <div class="emplacement">
-                  <input type="text" id="name" name="Nom" required >
+                  <input type="text" id="name" name="Nom" required />
                 </div>
 
                 <div class="label">
                   <label for="prenom">Prénom :</label>
                 </div>
                 <div class="emplacement">
-                  <input type="text" id="prenom" name="Prénom" required >
+                  <input type="text" id="prenom" name="Prénom" required />
                 </div>
 
                 <div class="label">
                   <label for="userName">Identifiant :</label>
                 </div>
                 <div class="emplacement">
-                  <input type="text" id="userName" name="UserName" required >
+                  <input type="text" id="userName" name="UserName" required />
                 </div>
 
                 <div class="label">
                   <label for="password">Mot de passe :</label>
                 </div>
                 <div class="emplacement">
-                  <input type="password" id="password" name="password" required>
+                  <input type="password" id="password" name="password" required/>
                 </div>
 
                 <div id="messageInscription">
@@ -71,18 +76,18 @@
                   <label for="question">Question secrète :</label>
                 </div>
                 <div class="emplacement">
-                  <input type="text" id="question" name="quesionSecrete" required >
+                  <input type="text" id="question" name="quesionSecrete" required />
                 </div>
 
                 <div class="label">
                   <label for="reponse">Réponse :</label>
                 </div>
                 <div class="emplacement">
-                  <input type="text" id="reponse" name="UserName" required >
+                  <input type="text" id="reponse" name="UserName" required />
                 </div>
 
                 <div id="inscription">
-                  <input class="inscription" type="button" value="Inscription">
+                  <input class="inscription" type="button" value="Inscription"/>
                 </div>
 
               </div>

@@ -2,6 +2,8 @@
 <?php
   // On démarre la session AVANT d'écrire du code HTML
   session_start();
+  include("fonctions.php"); 
+  actualiser_session();
 
   // Connexion à la base de données
  try
@@ -13,7 +15,6 @@
      die('Erreur : ' . $e->getMessage());
  }
  ?>
-
 
 <!DOCTYPE html>
 <html>

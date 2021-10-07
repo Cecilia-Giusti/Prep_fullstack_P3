@@ -1,23 +1,7 @@
 <?php
-// On démarre la session AVANT d'écrire du code HTML
-session_start();
-?>
+  // On démarre la session AVANT d'écrire du code HTML
+  session_start();
 
-<!DOCTYPE html>
-<html>
-
-  <head>
-    <meta charset="utf-8"> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Parametres post</title>
-    <meta name="description" content="L'extranet pour les salariés de GBAF">
-    <link rel="stylesheet" href="styles.css"/>
-  </head>
-
-<body>   
-
-  <?php
   // Connexion à la base de données
   try
   {
@@ -89,5 +73,4 @@ session_start();
 
 
 ?>
-</body>
-</html>
+

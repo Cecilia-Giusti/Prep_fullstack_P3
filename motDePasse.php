@@ -1,3 +1,15 @@
+<?php
+    // Connexion à la base de données
+  try
+  {
+      $bdd = new PDO('mysql:host=localhost;dbname=gbaf;charset=utf8', 'root', 'root', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+  }
+  catch (Exception $e)
+  {
+      die('Erreur : ' . $e->getMessage());
+  }
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -12,30 +24,9 @@
 
 <body>     
   <div id="container">  
-    <!-- Header  -->
-      <header>
-        <nav>
-          <!-- Logo-->
-          <div id="logo_GBAF">
-            <img src="images_web/logo_fonbblanc.png" alt="Logo GBAF" />
-          </div>
-
-          <!-- Nom & prénom s'il y a connexion-->
-          <div id="barreDidentite">
-            <ul> 
-              <li><img src="images_web/icone_identite.png" alt="Image identite"/></li>
-              <li><a class="nomPrenom" href="parametres.html"> Nom & Prénom <a></li>
-            </ul>
-          </div>
-          <!--Deconnexion s'il y a connexion -->
-          <div id="deconnexion">
-          <a class="deconnexion" href="connexion.html">Déconnexion</a>
-          </div>
-
-        </nav>
-      </header>
+    <?php include("header.php"); ?>
    
-    <!-- Paramètre du compte  -->
+      <!-- Paramètre du compte  -->
       <section id="formulaireMotDePasse">
           <form action="motDePasse_post.php" method="post">
             
@@ -85,42 +76,11 @@
                 <i><a href="connexion.php">Retour </a> </i>
               </div>
 
-           
-
-              </div>
-          </form>
-        
+            </div>
+        </form>
       </section> 
 
-
-   
-      <footer>
-        <div id="menuFooter">
-          <ul>
-            <Li>|<a href="mentionslegales.php"> Mentions Légales </a>|</Li>
-            <li><a href="contact.php">Contact </a>|</li>
-          </ul>
-        </div>
-      </footer>
+    <?php include("footer.php"); ?>
   </div>
-
-
-
-  <?php
-  // Connexion à la base de données
- try
- {
-     $bdd = new PDO('mysql:host=localhost;dbname=gbaf;charset=utf8', 'root', 'root', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
- }
- catch (Exception $e)
- {
-     die('Erreur : ' . $e->getMessage());
- }
- ?>
-
-
-
-
 </body>
-
 </html>

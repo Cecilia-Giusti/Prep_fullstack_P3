@@ -9,7 +9,7 @@
   try
   {
     
-    $bdd = new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'root', 'root', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+    $bdd = new PDO('mysql:host=localhost;dbname=gbaf;charset=utf8', 'root', 'root', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
   }
   catch (Exception $e)
@@ -67,43 +67,33 @@
           </p>
         </div>
       </section>
+<section> 
+<?php
+      // Récupération des acteurs - partenaires
+$reponse = $bdd->query('SELECT actor, description, logo FROM actors');
 
-      <section> 
-        <article>
-            <img src="images_web/CDE.png" alt="Logo CDE" />
-            <div class="paragraphe"><h3>CDE (chambre des entrepreneurs)</h3>
-              <p>La CDE (Chambre Des Entrepreneurs) accompagne les entreprises dans leurs démarches de formation. </p></div>
+
+// Affichage de chaque message (toutes les données sont protégées par htmlspecialchars)
+while ($donnees = $reponse->fetch())
+{ ?>
+  <article>
+            <img src="<?php echo(htmlspecialchars($donnees['logo']));?>" alt="Logo" />
+            <div class="paragraphe"><h3><?php echo(htmlspecialchars($donnees['actor']));?></h3>
+              <p><?php echo(htmlspecialchars($donnees['description']));?> </p></div>
             <div class="lirePlus">
               <input onclick="window.location.href='partenaires.html'" class="inscription" type="button" value="Lire la suite"/>
             </div>
         </article>
 
-        <article>
-          <img src="images_web/Dsa_france.png" alt="Logo Dsa" />
-          <div class="paragraphe"><h3>DSA France</h3>
-            <p>Dsa France accélère la croissance du territoire et s’engage avec les collectivités territoriales. </p></div>
-          <div class="lirePlus">
-            <input onclick="window.location.href='partenaires.html'" class="inscription" type="button" value="Lire la suite"/>
-          </div>
-        </article>
+  <?php
+}
 
-        <article>
-          <img src="images_web/formation_co.png" alt="Logo formation and co" />
-          <div class="paragraphe"><h3>Formation & co</h3>
-            <p>Formation&co est une association française présente sur tout le territoire. </p></div>
-          <div class="lirePlus">
-            <input onclick="window.location.href='partenaires.html'" class="inscription" type="button" value="Lire la suite"/>
-          </div>
-        </article>
+$reponse->closeCursor();
 
-        <article>
-          <img src="images_web/protectpeople.png" alt="Logo CDE" />
-          <div class="paragraphe"><h3>Protectpeople</h3>
-            <p>Protectpeople finance la solidarité nationale. </p></div>
-          <div class="lirePlus">
-            <input onclick="window.location.href='partenaires.html'" class="inscription" type="button" value="Lire la suite"/>
-          </div>
-        </article>
+?>
+
+      
+        
       </section>
 
     <?php include("footer.php"); ?>

@@ -13,6 +13,8 @@
     {
         die('Erreur : ' . $e->getMessage());
     }
+
+    if (isset($_SESSION['id'])){
  ?>
 
 <!DOCTYPE html>
@@ -77,3 +79,12 @@
 </body>
 
 </html>
+
+<?php
+}
+else {
+  // Redirection
+      header('Location: connexion.php');
+}
+
+?>

@@ -74,11 +74,12 @@
 <section> 
 <?php
   // Récupération des acteurs - partenaires
-  $reponse = $bdd->query('SELECT actor, description, logo FROM actors');
+  $reponse = $bdd->query('SELECT * FROM actors');
 
   // Affichage de chaque message (toutes les données sont protégées par htmlspecialchars)
   while ($donnees = $reponse->fetch())
-  { ?>
+  { 
+    ?>
     <article>
       <img src="<?php echo(htmlspecialchars($donnees['logo']));?>" alt="Logo" />
       <div class="paragraphe"><h3><?php echo(htmlspecialchars($donnees['actor']));?></h3>
@@ -90,7 +91,7 @@
         </p>
       </div>
       <div class="lirePlus">
-        <input onclick="window.location.href='partenaires.php'" class="inscription" type="button" value="Lire la suite"/>
+        <input onclick="window.location.href='partenaires.php?id=<?php echo(htmlspecialchars($donnees['id']));?>'" class="inscription" type="submit" value="Lire la suite"/>
       </div>
     </article>
 

@@ -16,8 +16,6 @@
 
     
     /* Header */
-
-
         /* Nav*/
 
         nav {
@@ -29,7 +27,8 @@
 
         #logo_GBAF img{
             width:10%;
-            margin-left: 5%}
+            margin-left: 5%;
+        }
 
     /* Titre h1 */
     #formulaireDeConnexion h1, #formulaireDinscription h1, #formulaireMotDePasse h1, #mentionsLegales h1, #contact h1, #modificationMotDePasse h1, #modificationQuestion h1{

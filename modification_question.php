@@ -29,9 +29,10 @@
     <link rel="stylesheet" href="styles.css"/>
   </head>
 
-<body>     
+  <body>       
   <div id="container">  
-      <?php include("header.php");?>
+       <!-- Header  -->
+    <?php include("header.php"); ?>
    
     <!-- Modification de la question secrète  -->
       <section id="modificationQuestion">

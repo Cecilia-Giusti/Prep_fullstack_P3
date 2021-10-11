@@ -35,8 +35,9 @@
     <link rel="stylesheet" href="styles.css"/>
   </head>
 
-<body>     
+  <body>       
   <div id="container">  
+       <!-- Header  -->
     <?php include("header.php"); ?>
    
        <!-- Section   -->

@@ -17,8 +17,8 @@
     die('Erreur : ' . $e->getMessage());
   }
 
-  if (isset($_SESSION['id'])){
 
+  if (isset($_SESSION['id'])){
   
 ?>
 
@@ -73,40 +73,42 @@
       </section>
 <section> 
 <?php
-      // Récupération des acteurs - partenaires
-$reponse = $bdd->query('SELECT actor, description, logo FROM actors');
+  // Récupération des acteurs - partenaires
+  $reponse = $bdd->query('SELECT actor, description, logo FROM actors');
 
+  // Affichage de chaque message (toutes les données sont protégées par htmlspecialchars)
+  while ($donnees = $reponse->fetch())
+  { ?>
+    <article>
+      <img src="<?php echo(htmlspecialchars($donnees['logo']));?>" alt="Logo" />
+      <div class="paragraphe"><h3><?php echo(htmlspecialchars($donnees['actor']));?></h3>
+        <p>
+          <?php 
+            $keywords = preg_split('/(?<=[.?!;:])\s+/', $donnees['description'], -1, PREG_SPLIT_NO_EMPTY);
+            echo ($keywords[0]);
+          ?> 
+        </p>
+      </div>
+      <div class="lirePlus">
+        <input onclick="window.location.href='partenaires.php'" class="inscription" type="button" value="Lire la suite"/>
+      </div>
+    </article>
 
-// Affichage de chaque message (toutes les données sont protégées par htmlspecialchars)
-while ($donnees = $reponse->fetch())
-{ ?>
-  <article>
-            <img src="<?php echo(htmlspecialchars($donnees['logo']));?>" alt="Logo" />
-            <div class="paragraphe"><h3><?php echo(htmlspecialchars($donnees['actor']));?></h3>
-              <p><?php echo(htmlspecialchars($donnees['description']));?> </p></div>
-            <div class="lirePlus">
-              <input onclick="window.location.href='partenaires.html'" class="inscription" type="button" value="Lire la suite"/>
-            </div>
-        </article>
+<?php
+  }
 
-  <?php
-}
+  $reponse->closeCursor();
+?>    
+</section>
 
-$reponse->closeCursor();
-
-?>
-
-      
-        
-      </section>
-
-    <?php include("footer.php"); ?>
-  </div>
+  <?php include("footer.php"); ?>
+</div>
 
 
    
 </body>
 </html>
+
 <?php
 }
 else {

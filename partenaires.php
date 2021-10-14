@@ -90,7 +90,7 @@ actualiser_session();
 
     <?php
   // Récupération des commentaires
-  $reponse = $bdd->query("SELECT * FROM posts WHERE id_actor= $_GET[id] ORDER BY ID DESC");
+  $reponse = $bdd->query("SELECT id_actor, DATE_FORMAT(created_at, '%d/%m/%Y à %Hh%i') AS date, post FROM posts WHERE id_actor= $_GET[id] ORDER BY ID DESC");
 
  
   // Affichage de chaque message (toutes les données sont protégées par htmlspecialchars)
@@ -100,7 +100,7 @@ actualiser_session();
 
     <article>
       <p>Prénom : <?php echo($_SESSION['firstname']);?></p>
-      <p>Date : <?php echo($donnees['created_at']);?></p>
+      <p>Le : <?php echo($donnees['date']) ; ?></p>
       <p>Message : <?php echo($donnees['post']);?></p>
     </article>
 

@@ -39,7 +39,13 @@ actualiser_session();
      'id' => $_SESSION['id'] 
      ));
  $donnees = $req->fetch();
-  
+
+ // Récupération des commentaires
+ $reponse = $bdd->query("SELECT id_actor, DATE_FORMAT(created_at, '%d/%m/%Y à %Hh%i') AS date, post FROM posts WHERE id_actor= $_GET[id] ORDER BY ID DESC");
+ 
+ 
+ $nombreDeCommentaire = $bdd->query("SELECT COUNT(*) AS nbCom FROM posts WHERE id_actor= $_GET[id]");
+ $count_total = $nombreDeCommentaire->fetch();
 ?>
 
 <!DOCTYPE html>
@@ -69,11 +75,19 @@ actualiser_session();
 
   <section id="commentaire">
     <div id="menuCommentaire">
-      <p>XX commentaires </p>
-      <div class="like"><a  href="like.php"><img src="images_web/like.png" alt="Like"/>  X</a></div>
+      <p>
+        <?php 
+          if ($count_total['nbCom'] > 1) {
+            echo ($count_total['nbCom']) . ' commentaires' ;
+          }
+          else {
+            echo ($count_total['nbCom']) . ' commentaire' ;
+          }
+        ?>
+      </p>
+ <div class="like"><a  href="like.php"><img src="images_web/like.png" alt="Like"/>  X</a></div>
       <div class="like"><a href="like.php">X   <img src="images_web/dislike.png" alt="dislike"/> </a></div>
-    </div>
-
+</div>
     <form action="commentaires_post.php?id=<?php echo(htmlspecialchars($resultat['id']));?>" method="post">  
       <article>
         <div class="emplacement">
@@ -89,10 +103,6 @@ actualiser_session();
     </form>
 
     <?php
-  // Récupération des commentaires
-  $reponse = $bdd->query("SELECT id_actor, DATE_FORMAT(created_at, '%d/%m/%Y à %Hh%i') AS date, post FROM posts WHERE id_actor= $_GET[id] ORDER BY ID DESC");
-
- 
   // Affichage de chaque message (toutes les données sont protégées par htmlspecialchars)
   while ($donnees = $reponse->fetch())
   { 
@@ -106,7 +116,6 @@ actualiser_session();
 
     <?php 
   }
-
   $reponse->closeCursor();
   ?>
   </section>

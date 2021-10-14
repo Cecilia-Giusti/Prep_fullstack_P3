@@ -43,9 +43,18 @@ actualiser_session();
  // Récupération des commentaires
  $reponse = $bdd->query("SELECT id_actor, DATE_FORMAT(created_at, '%d/%m/%Y à %Hh%i') AS date, post FROM posts WHERE id_actor= $_GET[id] ORDER BY ID DESC");
  
- 
+  // Récupération du nombre de commentaires
  $nombreDeCommentaire = $bdd->query("SELECT COUNT(*) AS nbCom FROM posts WHERE id_actor= $_GET[id]");
  $count_total = $nombreDeCommentaire->fetch();
+
+   // Récupération du nombre de vote like
+   $nombreDeLike = $bdd->query("SELECT COUNT(vote) AS nbLike FROM likes WHERE id_actor= $_GET[id] AND vote=1");
+   $count_like = $nombreDeLike->fetch();
+  
+     // Récupération du nombre de vote dislike
+     $nombreDeDislike = $bdd->query("SELECT COUNT(vote) AS nbDislike FROM likes WHERE id_actor= $_GET[id] AND vote=0");
+     $count_dislike = $nombreDeDislike->fetch();
+
 ?>
 
 <!DOCTYPE html>
@@ -85,9 +94,19 @@ actualiser_session();
           }
         ?>
       </p>
- <div class="like"><a  href="like.php"><img src="images_web/like.png" alt="Like"/>  X</a></div>
-      <div class="like"><a href="like.php">X   <img src="images_web/dislike.png" alt="dislike"/> </a></div>
-</div>
+      
+      <div class="like"><a  href="like_post.php?id=<?php echo(htmlspecialchars($resultat['id']));?>&amp;vote=1"><img src="images_web/like.png" alt="Like"/> <?php echo ($count_like['nbLike']);?> </a></div>
+      <div class="like"><a href="like_post.php?id=<?php echo(htmlspecialchars($resultat['id']));?>&amp;vote=0"><?php echo ($count_dislike['nbDislike']);?>   <img src="images_web/dislike.png" alt="dislike"/> </a></div>
+    
+ <?php 
+
+ // Ajouter un if l utilisateur à cliqué alors dans une autre couleur 
+
+ ?>
+
+
+    </div>
+
     <form action="commentaires_post.php?id=<?php echo(htmlspecialchars($resultat['id']));?>" method="post">  
       <article>
         <div class="emplacement">

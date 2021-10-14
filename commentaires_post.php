@@ -31,7 +31,6 @@
 
     $id = $donnees['id'];
 
-    $DateAndTime = date('m-d-Y h:i:s a', time()); 
 
     // Insertion du message à l'aide d'une requête préparée
     $req = $bdd->prepare('INSERT INTO posts (id_user,id_actor,post) VALUES(?,?,?)');

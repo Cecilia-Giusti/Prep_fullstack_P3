@@ -1,8 +1,13 @@
 <?php
-  // On démarre la session AVANT d'écrire du code HTML
-  session_start();
-  include("fonctions.php"); 
-  actualiser_session();
+
+// On démarre la session AVANT d'écrire du code HTML
+session_start();
+$_SESSION['id'] ;
+$_SESSION['name'];
+$_SESSION['firstname'] ;
+$_SESSION['username'] ;
+include("fonctions.php"); 
+actualiser_session();
 
   // Connexion à la base de données
  
@@ -20,12 +25,20 @@
 
   if (isset($_SESSION['id'])){
 
-  // Données de la base de données
+  // Données de la base de données des acteurs - partenaires
   $req = $bdd->prepare('SELECT * FROM actors WHERE id = :id');
   $req->execute(array(
       'id' => $_GET['id'] 
       ));
   $resultat = $req->fetch();
+
+
+  // Données de la base de données des users
+ $req = $bdd->prepare('SELECT * FROM users WHERE id = :id');
+ $req->execute(array(
+     'id' => $_SESSION['id'] 
+     ));
+ $donnees = $req->fetch();
   
 ?>
 
@@ -43,7 +56,7 @@
 
  <body>       
   <div id="container">  
-       <!-- Header  -->
+    <!-- Header  -->
     <?php include("header.php"); ?>
    
    <!-- Section   -->
@@ -57,42 +70,57 @@
   <section id="commentaire">
     <div id="menuCommentaire">
       <p>XX commentaires </p>
-      <input onclick="window.location.href='index.html'" class="boutonCommentaire" type="button" value="Commenter"/>
-      
       <div class="like"><a  href="like.php"><img src="images_web/like.png" alt="Like"/>  X</a></div>
       <div class="like"><a href="like.php">X   <img src="images_web/dislike.png" alt="dislike"/> </a></div>
     </div>
 
-    <article>
-      <p>Prénom :</p>
-      <p>Date :</p>
-      <p>Texte :</p>
-    </article>
+    <form action="commentaires_post.php?id=<?php echo(htmlspecialchars($resultat['id']));?>" method="post">  
+      <article>
+        <div class="emplacement">
+          <input type="text" id="emplacementMessage" name="post" value="Votre commentaire" onFocus="this.value=''"/>
+        </div>
+
+        <input type="hidden" name="id" value="<?php echo($donnees['id']);?>" />
+
+        <div id="boutonCommentaire">
+          <input class="boutonCommentaire" type="submit" value="Envoyer"/>
+        </div>
+      </article>
+    </form>
+
+    <?php
+  // Récupération des commentaires
+  $reponse = $bdd->query("SELECT * FROM posts WHERE id_actor= $_GET[id] ORDER BY ID DESC");
+
+ 
+  // Affichage de chaque message (toutes les données sont protégées par htmlspecialchars)
+  while ($donnees = $reponse->fetch())
+  { 
+  ?>  
 
     <article>
-      <p>Prénom :</p>
-      <p>Date :</p>
-      <p>Texte :</p>
+      <p>Prénom : <?php echo($_SESSION['firstname']);?></p>
+      <p>Date : <?php echo($donnees['created_at']);?></p>
+      <p>Message : <?php echo($donnees['post']);?></p>
     </article>
 
-    <article>
-      <p>Prénom :</p>
-      <p>Date :</p>
-      <p>Texte :</p>
-    </article>
+    <?php 
+  }
+
+  $reponse->closeCursor();
+  ?>
   </section>
  
      <?php include("footer.php"); ?>
   </div>
 </body>
-
 </html>
 
 <?php
 }
 else {
   // Redirection
-      header('Location: connexion.php');
+      header("Location: connexion.php");
 }
 
 ?>

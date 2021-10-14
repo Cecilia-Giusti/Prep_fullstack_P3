@@ -1,6 +1,10 @@
 <?php
   // On démarre la session AVANT d'écrire du code HTML
   session_start();
+  $_SESSION['id'] ;
+  $_SESSION['name'];
+  $_SESSION['firstname'] ;
+  $_SESSION['username'] ;
   include("fonctions.php"); 
   actualiser_session();
 
@@ -18,7 +22,7 @@
   }
 
 
-  if (isset($_SESSION['id'])){
+  if (isset($_SESSION['name'])){
   
 ?>
 
@@ -30,7 +34,7 @@
     <meta charset="utf-8"> 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Paramètre extranet GBAF</title>
+    <title>Page d'accueil de l'extranet de GBAF</title>
     <meta name="description" content="L'extranet pour les salariés de GBAF">
     <link rel="stylesheet" href="styles.css"/>
   </head>
@@ -95,27 +99,21 @@
         <input onclick="window.location.href='partenaires.php?id=<?php echo(htmlspecialchars($donnees['id']));?>'" class="inscription" type="submit" value="Lire la suite"/>
       </div>
     </article>
-
-<?php
-  }
-
-  $reponse->closeCursor();
-?>    
 </section>
-
-  <?php include("footer.php"); ?>
 </div>
-
-
-   
 </body>
 </html>
 
 <?php
+  }
+ $reponse->closeCursor();
+
+include("footer.php"); 
+
 }
 else {
   // Redirection
-      header('Location: connexion.php');
+      header('Location: deconnexion.php');
 }
 
 ?>

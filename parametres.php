@@ -53,14 +53,14 @@
             <div class="label">
               <label for="firstname">Prénom :</label>
             </div>
-            <div class="emplacement"><!-- Ajouter le php pour retrouver le prénom initial-->
+            <div class="emplacement">
               <input type="text" id="prenom" name="firstname" value="<?php echo (ucwords($_SESSION['firstname']));?>" onFocus="this.value=''" />
             </div>
 
             <div class="label">
               <label for="username">Identifiant :</label>
             </div>
-            <div class="emplacement"><!-- Ajouter le php pour retrouver l'username initial-->
+            <div class="emplacement">
               <input type="text" id="userName" name="username" value="<?php echo $_SESSION['username'];?>" onFocus="this.value=''" />
             </div>
 

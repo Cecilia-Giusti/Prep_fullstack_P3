@@ -3,7 +3,7 @@
   <nav>
     <!-- Logo-->
     <div id="logo_GBAF">
-      <img src="images_web/logo_fonbblanc.png" alt="Logo GBAF" />
+      <a href="index.php"><img src="images_web/logo_fonbblanc.png" alt="Logo GBAF" /></a>
     </div>
 
     <?php 

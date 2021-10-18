@@ -42,16 +42,16 @@ actualiser_session();
         ));
     $vote = $req->fetch();
 
-    // Verification d'un ancien vote
-        if ($vote OR !$vote) {
 
-            // Insertion du message à l'aide d'une requête préparée
-            $req = $bdd->prepare('DELETE FROM likes WHERE id_user = :id_user');
-            $req->execute(array(
-            'id_user'=> $resultat['id'], 
-            ));
 
-           // Insertion du message à l'aide d'une requête préparée
+    // S'il y a un vote positif
+
+    if ( $_GET['vote']==1) {
+
+        // Et aucun vote dans la base de données
+        if (!isset($vote['vote'])){
+
+            // Insertion du vote à l'aide d'une requête préparée
             $req = $bdd->prepare('INSERT INTO likes (id_user,id_actor,vote) VALUES(?,?,?)');
             $req->execute(array(
             $resultat['id'], 
@@ -59,27 +59,87 @@ actualiser_session();
             $_GET['vote']
             ));
 
-           
         }
-    
+
         else {
-            // Insertion du message à l'aide d'une requête préparée
-            $req = $bdd->prepare('INSERT INTO likes (id_user,id_actor,vote) VALUES(?,?,?)');
-            $req->execute(array(
-            $resultat['id'], 
-            $donnees['id'],
-            $_GET['vote']
-    ));
-}
+            if ($vote['vote']==1) {
+                // Suppression du vote à l'aide d'une requête préparée
+                $req = $bdd->prepare('DELETE FROM likes WHERE id_user = :id_user');
+                $req->execute(array(
+                'id_user'=> $vote['id_user'], 
+                ));
+            }
+
+            else {
+                // Suppression du vote à l'aide d'une requête préparée
+                $req = $bdd->prepare('DELETE FROM likes WHERE id_user = :id_user');
+                $req->execute(array(
+                'id_user'=> $vote['id_user'], 
+                ));
+
+                // Insertion du vote à l'aide d'une requête préparée
+                $req = $bdd->prepare('INSERT INTO likes (id_user,id_actor,vote) VALUES(?,?,?)');
+                $req->execute(array(
+                $resultat['id'], 
+                $donnees['id'],
+                $_GET['vote']
+                ));
+            }
+
+        }
+    }
+
+    // Sinon  le vote = 0
+    if ( $_GET['vote']==0) {
+
+            // Et aucun vote dans la base de données
+            if (!isset($vote['vote'])){
+
+                // Insertion du vote à l'aide d'une requête préparée
+                $req = $bdd->prepare('INSERT INTO likes (id_user,id_actor,vote) VALUES(?,?,?)');
+                $req->execute(array(
+                $resultat['id'], 
+                $donnees['id'],
+                $_GET['vote']
+                ));
+
+            }
+
+            else {
+                if ($vote['vote']==0) {
+                    // Suppression du vote à l'aide d'une requête préparée
+                    $req = $bdd->prepare('DELETE FROM likes WHERE id_user = :id_user');
+                    $req->execute(array(
+                    'id_user'=> $vote['id_user'], 
+                    ));
+                }
+
+                else {
+                    // Suppression du vote à l'aide d'une requête préparée
+                    $req = $bdd->prepare('DELETE FROM likes WHERE id_user = :id_user');
+                    $req->execute(array(
+                    'id_user'=> $vote['id_user'], 
+                    ));
+
+                    // Insertion du vote à l'aide d'une requête préparée
+                    $req = $bdd->prepare('INSERT INTO likes (id_user,id_actor,vote) VALUES(?,?,?)');
+                    $req->execute(array(
+                    $resultat['id'], 
+                    $donnees['id'],
+                    $_GET['vote']
+                    ));
+                }
+
+            }   
+
+    }
 
 
-    
-  
+
+   
   
     // Redirection
     header("Location: partenaires.php?id=$id");
-
+    
     
 ?>
-
-

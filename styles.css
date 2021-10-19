@@ -451,7 +451,26 @@
         }
 
       
-       
+    /* Design de la page 404*/
+
+    #error {
+        text-align:center;
+        width: 80%;
+        margin :auto;
+        font-size:2em;
+        height: 500px;
+        
+    }
+
+    #error a{
+        text-decoration: none;
+        color: #ed1e24;
+    }
+
+    #error a:hover{
+        color:#333;
+        border-bottom: 1px solid #333;
+    }
         
 
     /* Design du footer*/

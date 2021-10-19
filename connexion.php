@@ -1,32 +1,21 @@
-<?php
-  try
-  {
-    $bdd = new PDO('mysql:host=localhost;dbname=gbaf;charset=utf8', 'root', 'root');
-  }
-  catch (Exception $e)
-  {
-          die('Erreur : ' . $e->getMessage());
-  }
-  ?>  
-
 <!DOCTYPE html>
-<html>
+  <html>
 
-<head>
-  <meta charset="utf-8"> 
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Connexion</title>
-  <meta name="description" content="L'extranet pour les salariés de GBAF">
-  <link rel="stylesheet" href="styles.css"/>
-</head>
+  <head>
+    <meta charset="utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Connexion</title>
+    <meta name="description" content="L'extranet pour les salariés de GBAF">
+    <link rel="stylesheet" href="styles.css"/>
+  </head>
 
-<body>       
-  <div id="container">  
-       <!-- Header  -->
-    <?php include("header.php"); ?>
+  <body>       
+    <div id="container">  
+      <!-- Header  -->
+      <?php include("header.php"); ?>
    
-    <!-- Formulaire de connexion   -->
+      <!-- Formulaire de connexion   -->
       <section id="formulaireDeConnexion">
         <form action="connexion_post.php" method="post">
           
@@ -63,7 +52,7 @@
             </div>
         </form>
       </section> 
-     <?php include("footer.php"); ?>
-  </div>
-</body>
+      <?php include("footer.php"); ?>
+    </div>
+  </body>
 </html>

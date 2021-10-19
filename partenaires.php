@@ -33,15 +33,10 @@ actualiser_session();
   $resultat = $req->fetch();
 
 
-  // Données de la base de données des users
- $req = $bdd->prepare('SELECT * FROM users WHERE id = :id');
- $req->execute(array(
-     'id' => $_SESSION['id'] 
-     ));
- $donnees = $req->fetch();
+
 
  // Récupération des commentaires
- $reponse = $bdd->query("SELECT id_actor, DATE_FORMAT(created_at, '%d/%m/%Y à %Hh%i') AS date, post FROM posts WHERE id_actor= $_GET[id] ORDER BY ID DESC");
+ $reponse = $bdd->query("SELECT id, id_user, id_actor, DATE_FORMAT(created_at, '%d/%m/%Y à %Hh%i') AS date, post FROM posts WHERE id_actor= $_GET[id] ORDER BY ID DESC");
  
   // Récupération du nombre de commentaires
  $nombreDeCommentaire = $bdd->query("SELECT COUNT(*) AS nbCom FROM posts WHERE id_actor= $_GET[id]");
@@ -54,6 +49,14 @@ actualiser_session();
      // Récupération du nombre de vote dislike
      $nombreDeDislike = $bdd->query("SELECT COUNT(vote) AS nbDislike FROM likes WHERE id_actor= $_GET[id] AND vote=0");
      $count_dislike = $nombreDeDislike->fetch();
+
+       // Données de la base de données des users
+ $req = $bdd->prepare('SELECT * FROM users WHERE id = :id');
+ $req->execute(array(
+     'id' => $_SESSION['id'] 
+     ));
+ $donnees = $req->fetch();
+
 
 ?>
 
@@ -122,15 +125,34 @@ actualiser_session();
     </form>
 
     <?php
-  // Affichage de chaque message (toutes les données sont protégées par htmlspecialchars)
-  while ($donnees = $reponse->fetch())
+  // Affichage de chaque message 
+  while ($commentaire = $reponse->fetch())
   { 
+
+  // Données de la base de données des acteurs - partenaires
+  $req = $bdd->prepare('SELECT * FROM users WHERE id = :id');
+  $req->execute(array(
+      'id' => $commentaire['id_user'] 
+      ));
+  $prenom = $req->fetch();  
   ?>  
 
     <article>
-      <p>Prénom : <?php echo($_SESSION['firstname']);?></p>
-      <p>Le : <?php echo($donnees['date']) ; ?></p>
-      <p>Message : <?php echo($donnees['post']);?></p>
+      <p>Prénom : <?php echo($prenom['firstname']);?></p>
+      <p>Le : <?php echo($commentaire['date']) ; ?></p>
+      <p>Message : <?php echo($commentaire['post']);?></p>
+
+      <?php 
+      if ($donnees['id'] == $commentaire['id_user']) {
+        ?>
+        <div class="Retour">
+              <i><a href="commentaires_supp.php?id=<?php echo($commentaire['id']);?>">Supprimer </a> </i>
+      </div>
+      <?php
+      }
+
+      ?>
+      
     </article>
 
     <?php 

@@ -5,15 +5,7 @@
     include("fonctions.php"); 
     actualiser_session();
 
-    // Connexion à la base de données
-    try
-    {
-        $bdd = new PDO('mysql:host=localhost;dbname=gbaf;charset=utf8', 'root', 'root', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-    }
-    catch (Exception $e)
-    {
-        die('Erreur : ' . $e->getMessage());
-    }
+    include("dataBaseConnection.php");
 
 
     // Données de la base de données
@@ -41,8 +33,8 @@
             $req = $bdd->prepare('UPDATE users SET question = :question , answer = :answer WHERE id =:id');
             $req->execute(array(
                 'id'=> $_SESSION['id'],
-                'question' => $_POST['question'],
-                'answer' => $_POST['answer']
+                'question' => htmlspecialchars($_POST['question']),
+                'answer' => htmlspecialchars($_POST['answer'])
             ));
 
             // Redirection

@@ -1,21 +1,6 @@
-<?php
-    // On démarre la session AVANT d'écrire du code HTML
-    session_start();
-    include("fonctions.php"); 
-    actualiser_session();
-
-  // Connexion à la base de données
-    try
-    {
-        $bdd = new PDO('mysql:host=localhost;dbname=gbaf;charset=utf8', 'root', 'root', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-    }
-    catch (Exception $e)
-    {
-        die('Erreur : ' . $e->getMessage());
-    }
-
-    if (isset($_SESSION['id'])){
- ?>
+<?php 
+  include("middleware.php");
+?>
 
 <!DOCTYPE html>
 <html>
@@ -81,11 +66,3 @@
 
 </html>
 
-<?php
-}
-else {
-  // Redirection
-      header('Location: connexion.php');
-}
-
-?>

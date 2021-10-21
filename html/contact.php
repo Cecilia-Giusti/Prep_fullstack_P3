@@ -18,7 +18,7 @@
     <!--  Contact  -->
       <section id="contact">
         
-        <form action="contact_post.php" method="post">
+        <form action="connexion_post.php" method="post">
           
           <h1> Contact</h1>
             <div id="contactNous">
@@ -27,7 +27,7 @@
               </div>
 
               <div class="emplacement">
-                <input type="text" id="name" name="name" required />
+                <input type="text" id="name" name="Nom" required />
               </div>
 
               <div class="label">
@@ -43,7 +43,7 @@
               </div>
 
               <div class="emplacement">
-                <input type="text" id="objet" name="object" required/>
+                <input type="text" id="objet" name="objet" required/>
               </div>
 
               <div class="label">
@@ -51,7 +51,7 @@
               </div>
 
               <div class="emplacement">
-                <textarea id="message" name="message" required rows="8" cols="30">
+                <textarea id="message" name="message" required rows="8" cols="35">
                 </textarea>
               </div>
 

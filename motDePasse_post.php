@@ -1,22 +1,14 @@
 
 <?php
-    // Connexion à la base de données
-    try
-    {
-        $bdd = new PDO('mysql:host=localhost;dbname=gbaf;charset=utf8', 'root', 'root', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-    }
-    catch (Exception $e)
-    {
-        die('Erreur : ' . $e->getMessage());
-    }
+    include("dataBaseConnection.php");
 
 
     // Données de la base de données
     $req = $bdd->prepare('SELECT * FROM users WHERE username = :username AND question = :question AND answer = :answer');
     $req->execute(array(
-        'username' => $_POST['username'], 
-        'question' => $_POST['question'], 
-        'answer' => $_POST['answer'] 
+        'username' => htmlspecialchars($_POST['username']), 
+        'question' => htmlspecialchars($_POST['question']), 
+        'answer' => htmlspecialchars($_POST['answer']) 
         ));
     $resultat = $req->fetch();
 

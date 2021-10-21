@@ -1,6 +1,7 @@
 
 <?php
 
+include("dataBaseConnection.php");
 include("middleware.php");
 
 if (isset($_POST['id']) AND isset($_GET['id']) AND isset($_POST['post']) AND ($_POST['post'] != "Votre commentaire")){

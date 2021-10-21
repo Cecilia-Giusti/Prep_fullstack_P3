@@ -1,11 +1,9 @@
 
 
 <?php 
-
+include("dataBaseConnection.php");
   include("middleware.php");
 
-  if (isset($_SESSION['name'])){
-  
 ?>
 
 
@@ -92,10 +90,5 @@
 
 include("footer.php"); 
 
-}
-else {
-  // Redirection
-      header('Location: deconnexion.php');
-}
 
 ?>

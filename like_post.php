@@ -9,15 +9,7 @@ $_SESSION['username'] ;
 include("fonctions.php"); 
 actualiser_session();
 
-    // Connexion à la base de données
-    try
-    {
-        $bdd = new PDO('mysql:host=localhost;dbname=gbaf;charset=utf8', 'root', 'root');
-    }
-    catch (Exception $e)
-    {
-            die('Erreur : ' . $e->getMessage());
-    }
+include("dataBaseConnection.php");
 
     // Verification des données avec la base de données
     $req = $bdd->prepare('SELECT * FROM users WHERE id = :id');
@@ -29,7 +21,7 @@ actualiser_session();
     // Base de données des acteurs - partenaires
     $req = $bdd->prepare('SELECT * FROM actors WHERE id = :id');
     $req->execute(array(
-        'id' => $_GET['id'] 
+        'id' => htmlspecialchars($_GET['id']) 
         ));
     $donnees = $req->fetch();
 
@@ -56,7 +48,7 @@ actualiser_session();
             $req->execute(array(
             $resultat['id'], 
             $donnees['id'],
-            $_GET['vote']
+            htmlspecialchars($_GET['vote'])
             ));
 
         }
@@ -80,9 +72,9 @@ actualiser_session();
                 // Insertion du vote à l'aide d'une requête préparée
                 $req = $bdd->prepare('INSERT INTO likes (id_user,id_actor,vote) VALUES(?,?,?)');
                 $req->execute(array(
-                $resultat['id'], 
-                $donnees['id'],
-                $_GET['vote']
+                    htmlspecialchars($resultat['id']), 
+                    htmlspecialchars($donnees['id']),
+                    htmlspecialchars($_GET['vote'])
                 ));
             }
 
@@ -98,9 +90,9 @@ actualiser_session();
                 // Insertion du vote à l'aide d'une requête préparée
                 $req = $bdd->prepare('INSERT INTO likes (id_user,id_actor,vote) VALUES(?,?,?)');
                 $req->execute(array(
-                $resultat['id'], 
-                $donnees['id'],
-                $_GET['vote']
+                    htmlspecialchars($resultat['id']), 
+                    htmlspecialchars($donnees['id']),
+                    htmlspecialchars($_GET['vote'])
                 ));
 
             }
@@ -126,7 +118,7 @@ actualiser_session();
                     $req->execute(array(
                     $resultat['id'], 
                     $donnees['id'],
-                    $_GET['vote']
+                    htmlspecialchars($_GET['vote'])
                     ));
                 }
 

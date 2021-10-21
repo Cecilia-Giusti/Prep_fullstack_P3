@@ -5,15 +5,9 @@
     include("fonctions.php"); 
     actualiser_session();
 
-    // Connexion à la base de données
-    try
-    {
-        $bdd = new PDO('mysql:host=localhost;dbname=gbaf;charset=utf8', 'root', 'root');
-    }
-    catch (Exception $e)
-    {
-            die('Erreur : ' . $e->getMessage());
-    }
+    include("dataBaseConnection.php");
+
+    if (isset($_GET['id'])) {
 
     // Verification des données avec la base de données
     $req = $bdd->prepare('SELECT * FROM users WHERE name = :name AND firstname =:firstname AND username=:username ');
@@ -27,7 +21,7 @@
      // Verification des données avec la base de données
      $req = $bdd->prepare('SELECT * FROM posts WHERE id = :id');
      $req->execute(array(
-         'id' => $_GET['id'] 
+         'id' => htmlspecialchars($_GET['id']) 
          ));
      $commentaire = $req->fetch();
 
@@ -48,7 +42,7 @@
          // Suppression du commentaire à l'aide d'une requête préparée
     $req = $bdd->prepare('DELETE FROM posts WHERE id = :id');
     $req->execute(array(
-    'id'=> $_GET['id'], 
+    'id'=> htmlspecialchars($_GET['id'])
     ));
 
      }
@@ -64,6 +58,14 @@
  
      // Redirection
      header("Location: partenaires.php?id=$id");
+
+
+    }
+
+    else {
+        // Redirection
+        header("Location: deconnexion.php");
+       }
 
 
 

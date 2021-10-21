@@ -4,15 +4,7 @@
   include("fonctions.php"); 
   actualiser_session();
 
-  // Connexion à la base de données
-  try
-  {
-      $bdd = new PDO('mysql:host=localhost;dbname=gbaf;charset=utf8', 'root', 'root', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-  }
-  catch (Exception $e)
-  {
-      die('Erreur : ' . $e->getMessage());
-  }
+  include("dataBaseConnection.php");
 
   // Données de la base de données
   $req = $bdd->prepare('SELECT * FROM users WHERE username = :username');
@@ -37,28 +29,29 @@
           //Modification du nom à l'aide d'une requête préparée
           $req = $bdd->prepare('UPDATE users SET name = :name');
           $req->execute(array(
-              'name' => $_POST['name']
+              'name' => htmlspecialchars($_POST['name'])
           ));
-          $_SESSION['name'] = $_POST['name'];
+
+          $_SESSION['name'] = htmlspecialchars($_POST['name']);
         }
         
         if (isset($_POST['firstname'])) {
           //Modification du prénom à l'aide d'une requête préparée
           $req = $bdd->prepare('UPDATE users SET firstname = :firstname');
           $req->execute(array(
-              'firstname' => $_POST['firstname']
+              'firstname' => htmlspecialchars($_POST['firstname'])
           ));
-          $_SESSION['firstname'] = $_POST['firstname'];
+          $_SESSION['firstname'] = htmlspecialchars($_POST['firstname']);
         }
 
           if (isset($_POST['username'])) {
             //Modification de l'identifiant à l'aide d'une requête préparée
             $req = $bdd->prepare('UPDATE users SET username = :username');
             $req->execute(array(
-                'username' => $_POST['username']
+                'username' => htmlspecialchars($_POST['username'])
             ));
           
-            $_SESSION['username'] = $_POST['username'];
+            $_SESSION['username'] = htmlspecialchars($_POST['username']);
           }     
             
             

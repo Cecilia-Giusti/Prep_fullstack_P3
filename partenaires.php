@@ -1,34 +1,12 @@
-<?php
+<?php 
+include("dataBaseConnection.php");
+  include("middleware.php");
 
-// On démarre la session AVANT d'écrire du code HTML
-session_start();
-$_SESSION['id'] ;
-$_SESSION['name'];
-$_SESSION['firstname'] ;
-$_SESSION['username'] ;
-include("fonctions.php"); 
-actualiser_session();
-
-  // Connexion à la base de données
- 
-  try
-  {
-    
-    $bdd = new PDO('mysql:host=localhost;dbname=gbaf;charset=utf8', 'root', 'root', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-
-  }
-  catch (Exception $e)
-  {
-    die('Erreur : ' . $e->getMessage());
-  }
-
-
-  if (isset($_SESSION['id'])){
 
   // Données de la base de données des acteurs - partenaires
   $req = $bdd->prepare('SELECT * FROM actors WHERE id = :id');
   $req->execute(array(
-      'id' => $_GET['id'] 
+      'id' => htmlspecialchars($_GET['id']) 
       ));
   $resultat = $req->fetch();
 
@@ -113,7 +91,7 @@ actualiser_session();
     <form action="commentaires_post.php?id=<?php echo(htmlspecialchars($resultat['id']));?>" method="post">  
       <article>
         <div class="emplacement">
-          <input type="text" id="emplacementMessage" name="post" value="Votre commentaire" onFocus="this.value=''"/>
+          <input type="text" id="emplacementMessage" name="post" value="Votre commentaire" onFocus="this.value=''" required/>
         </div>
 
         <input type="hidden" name="id" value="<?php echo($donnees['id']);?>" />
@@ -166,11 +144,4 @@ actualiser_session();
 </body>
 </html>
 
-<?php
-}
-else {
-  // Redirection
-      header("Location: connexion.php");
-}
 
-?>

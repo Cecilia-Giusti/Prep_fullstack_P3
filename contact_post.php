@@ -6,23 +6,16 @@
     actualiser_session();
 
     // Connexion à la base de données
-    try
-    {
-        $bdd = new PDO('mysql:host=localhost;dbname=gbaf;charset=utf8', 'root', 'root');
-    }
-    catch (Exception $e)
-    {
-            die('Erreur : ' . $e->getMessage());
-    }
+    include("dataBaseConnection.php");
 
 
     // Insertion du message à l'aide d'une requête préparée
     $req = $bdd->prepare('INSERT INTO contact_forms (name,email,object,message) VALUES(?,?,?,?)');
     $req->execute(array(
-        $_POST['name'], 
-        $_POST['email'],
-        $_POST['object'],
-        $_POST['message']
+        htmlspecialchars($_POST['name']), 
+        htmlspecialchars($_POST['email']),
+        htmlspecialchars($_POST['object']),
+        htmlspecialchars($_POST['message'])
     ));
 
 

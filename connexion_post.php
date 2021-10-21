@@ -1,19 +1,11 @@
 <?php
-    // Connexion à la base de données
-    try
-    {
-        $bdd = new PDO('mysql:host=localhost;dbname=gbaf;charset=utf8', 'root', 'root', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-    }
-    catch (Exception $e)
-    {
-        die('Erreur : ' . $e->getMessage());
-    }
+ include("dataBaseConnection.php");
 
-
+    
     // Données de la base de données
     $req = $bdd->prepare('SELECT * FROM users WHERE username = :username');
     $req->execute(array(
-        'username' => $_POST['username'], 
+        'username' => htmlspecialchars($_POST['username']), 
         ));
     $resultat = $req->fetch();
 
@@ -32,7 +24,7 @@
             $_SESSION['id'] = $resultat['id'];
             $_SESSION['name'] = $resultat['name'];
             $_SESSION['firstname'] = $resultat['firstname'];
-            $_SESSION['username'] = $_POST['username'];
+            $_SESSION['username'] = $resultat['username'];
 
             // Redirection
             header('Location: index.php');

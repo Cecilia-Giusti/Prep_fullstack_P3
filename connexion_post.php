@@ -15,7 +15,7 @@
     if (!$resultat)
     {
         // Redirection
-        header('Location: connexion.php');
+        header('Location: deconnexion.php');
     }
     else
     {
@@ -31,7 +31,7 @@
         }
         else {
             // Redirection
-            header('Location: connexion.php');
+            header('Location: deconnexion.php');
         }
     }
 ?>

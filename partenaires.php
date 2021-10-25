@@ -1,7 +1,12 @@
 <?php 
 include("dataBaseConnection.php");
-  include("middleware.php");
+include("middleware.php");
 
+
+if (isset($resultat['id'])){
+
+  
+ if ($_GET['id']!= null) {
 
   // Données de la base de données des acteurs - partenaires
   $req = $bdd->prepare('SELECT * FROM actors WHERE id = :id');
@@ -10,30 +15,30 @@ include("dataBaseConnection.php");
       ));
   $resultat = $req->fetch();
 
+if(isset($resultat['id'])) {
 
-
-
- // Récupération des commentaires
- $reponse = $bdd->query("SELECT id, id_user, id_actor, DATE_FORMAT(created_at, '%d/%m/%Y à %Hh%i') AS date, post FROM posts WHERE id_actor= $_GET[id] ORDER BY ID DESC");
- 
-  // Récupération du nombre de commentaires
- $nombreDeCommentaire = $bdd->query("SELECT COUNT(*) AS nbCom FROM posts WHERE id_actor= $_GET[id]");
- $count_total = $nombreDeCommentaire->fetch();
-
-   // Récupération du nombre de vote like
-   $nombreDeLike = $bdd->query("SELECT COUNT(vote) AS nbLike FROM likes WHERE id_actor= $_GET[id] AND vote=1");
-   $count_like = $nombreDeLike->fetch();
+     
+  // Récupération des commentaires
+  $reponse = $bdd->query("SELECT id, id_user, id_actor, DATE_FORMAT(created_at, '%d/%m/%Y à %Hh%i') AS date, post FROM posts WHERE id_actor= $resultat[id] ORDER BY ID DESC");
   
-     // Récupération du nombre de vote dislike
-     $nombreDeDislike = $bdd->query("SELECT COUNT(vote) AS nbDislike FROM likes WHERE id_actor= $_GET[id] AND vote=0");
-     $count_dislike = $nombreDeDislike->fetch();
+  // Récupération du nombre de commentaires
+  $nombreDeCommentaire = $bdd->query("SELECT COUNT(*) AS nbCom FROM posts WHERE id_actor= $resultat[id]");
+  $count_total = $nombreDeCommentaire->fetch();
 
-       // Données de la base de données des users
- $req = $bdd->prepare('SELECT * FROM users WHERE id = :id');
- $req->execute(array(
-     'id' => $_SESSION['id'] 
-     ));
- $donnees = $req->fetch();
+  // Récupération du nombre de vote like
+  $nombreDeLike = $bdd->query("SELECT COUNT(vote) AS nbLike FROM likes WHERE id_actor= $resultat[id] AND vote=1");
+  $count_like = $nombreDeLike->fetch();
+
+  // Récupération du nombre de vote dislike
+  $nombreDeDislike = $bdd->query("SELECT COUNT(vote) AS nbDislike FROM likes WHERE id_actor= $resultatT[id] AND vote=0");
+  $count_dislike = $nombreDeDislike->fetch();
+
+  // Données de la base de données des users
+  $req = $bdd->prepare('SELECT * FROM users WHERE id = :id');
+  $req->execute(array(
+      'id' => $_SESSION['id'] 
+      ));
+  $donnees = $req->fetch();
 
 
 ?>
@@ -139,7 +144,28 @@ include("dataBaseConnection.php");
   ?>
   </section>
  
-     <?php include("footer.php"); ?>
+     <?php include("footer.php"); 
+      }
+      else {
+          // Redirection
+header('Location: 404.php');
+      }
+  }
+  else {
+       // Redirection
+header('Location: 404.php');
+  }
+  
+}
+
+else{
+   // Redirection
+header('Location: deconnexion.php');
+}
+  
+  ?>
+
+
   </div>
 </body>
 </html>

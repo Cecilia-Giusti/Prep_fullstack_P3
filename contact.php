@@ -47,12 +47,11 @@
               </div>
 
               <div class="label">
-                <label for="text">Message :</label>
+                <label for="text">Votre message :</label>
               </div>
 
               <div class="emplacement">
-                <textarea id="message" name="message" required rows="8" cols="30">
-                </textarea>
+              <input type="text" id="message" name="message" required/>
               </div>
 
              

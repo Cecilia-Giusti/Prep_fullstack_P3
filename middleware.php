@@ -5,8 +5,7 @@
  $_SESSION['name'];
  $_SESSION['firstname'] ;
  $_SESSION['username'] ;
- include("fonctions.php"); 
-  actualiser_session();
+
  
  
  include ("dataBaseConnection.php");
@@ -17,7 +16,4 @@
         'id' => $_SESSION['id'],
         ));
     $resultat = $req->fetch();
-
- 
-
   ?>

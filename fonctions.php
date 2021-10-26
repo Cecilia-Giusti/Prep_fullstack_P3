@@ -3,7 +3,7 @@
     {
         if ( isset($_SESSION['time']) ) // Test: Si il existe une session
         {
-            $tempsMaxSession = 300;                            
+            $tempsMaxSession = 20;                            
     // le temps maximal que dure la session en seconde
 
             if( ($_SESSION['time'] + $tempsMaxSession) >= time() ){    

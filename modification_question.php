@@ -16,53 +16,48 @@
 
   <body>       
   <div id="container">  
-       <!-- Header  -->
+    <!-- Header  -->
     <?php include("header.php"); ?>
    
     <!-- Modification de la question secrète  -->
-      <section id="modificationQuestion">
-          <form action="modification_question_post.php" method="post">
+    <section id="modificationQuestion">
+      <form action="modification_question_post.php" method="post">
             
-            <h1> Modifier la question secrète</h1>
-            <div id="margeMotDePasse">
-              <div class="label">
-                <label for="password">Mot de passe :</label>
-              </div>
-              <div class="emplacement">
-                <input type="password" id="password" name="password" required />
-              </div>
+        <h1> Modifier la question secrète</h1>
+        <div id="margeMotDePasse">
+          <div class="label">
+            <label for="password">Mot de passe :</label>
+          </div>
+          <div class="emplacement">
+            <input type="password" id="password" name="password" required />
+          </div>
 
-              <div class="label">
-                <label for="question">Nouvelle question secrète :</label>
-              </div>
-              <div class="emplacement">
-                <input type="text" id="question" name="question" required />
-              </div>
+          <div class="label">
+            <label for="question">Nouvelle question secrète :</label>
+          </div>
+          <div class="emplacement">
+            <input type="text" id="question" name="question" required />
+          </div>
 
-              <div class="label">
-                <label for="answer">Réponse :</label>
-              </div>
-              <div class="emplacement">
-                <input type="text" id="reponse" name="answer" required />
-              </div>
+          <div class="label">
+            <label for="answer">Réponse :</label>
+          </div>
+          <div class="emplacement">
+            <input type="text" id="reponse" name="answer" required />
+          </div>
 
-              <div id="modification">
-                <input class="modification" type="submit" value="Modifier"/>
-              </div>
+          <div id="modification">
+            <input class="modification" type="submit" value="Modifier"/>
+          </div>
 
-              <div class="retour">
-                <i><a href="parametres.php">Retour </a> </i>
-              </div>
-              </div>
-          </form>
-        
-      </section> 
-
-
-   
+          <div class="retour">
+            <i><a href="parametres.php">Retour </a> </i>
+          </div>
+        </div>
+      </form>  
+    </section> 
     <?php include("footer.php"); ?>
   </div>
 </body>
-
 </html>
 

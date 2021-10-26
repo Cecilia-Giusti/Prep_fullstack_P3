@@ -17,7 +17,7 @@
 
   <body>       
   <div id="container">  
-       <!-- Header  -->
+    <!-- Header  -->
     <?php include("header.php"); ?>
    
         <!-- Modification du mot de passe  -->
@@ -57,9 +57,6 @@
                 </div>
             </form>
         </section> 
-
-
-   
        <?php include("footer.php"); ?>
   </div>
 </body>

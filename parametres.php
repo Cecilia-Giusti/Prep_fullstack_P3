@@ -1,7 +1,7 @@
 
 <?php 
 include("dataBaseConnection.php");
-  include("middleware.php");
+include("middleware.php");
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +18,7 @@ include("dataBaseConnection.php");
 
   <body>       
   <div id="container">  
-       <!-- Header  -->
+    <!-- Header  -->
     <?php include("header.php"); ?>
    
       <!-- Paramètre du compte  -->
@@ -74,14 +74,9 @@ include("dataBaseConnection.php");
           </div>
         </form>
       </section> 
-
     <?php include("footer.php"); ?>
-
-
   </div>
-   
 </body>
-
 </html>
 
 

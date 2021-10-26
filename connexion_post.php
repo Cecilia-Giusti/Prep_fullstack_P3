@@ -1,7 +1,6 @@
 <?php
  include("dataBaseConnection.php");
 
-    
     // Données de la base de données
     $req = $bdd->prepare('SELECT * FROM users WHERE username = :username');
     $req->execute(array(
@@ -35,5 +34,4 @@
         }
     }
 ?>
-</body>
-</html>
+

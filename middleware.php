@@ -10,10 +10,10 @@
  
  include ("dataBaseConnection.php");
 
-    // Verification des données avec la base de données
-    $req = $bdd->prepare('SELECT * FROM users WHERE id =:id ');
-    $req->execute(array(
-        'id' => $_SESSION['id'],
-        ));
-    $resultat = $req->fetch();
+  // Verification des données avec la base de données
+  $req = $bdd->prepare('SELECT * FROM users WHERE id =:id ');
+  $req->execute(array(
+      'id' => $_SESSION['id'],
+      ));
+  $resultat = $req->fetch();
   ?>

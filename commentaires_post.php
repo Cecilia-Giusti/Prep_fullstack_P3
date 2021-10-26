@@ -6,7 +6,6 @@ include("middleware.php");
 
 if (isset($_POST['id']) AND isset($_GET['id']) AND isset($_POST['post']) AND ($_POST['post'] != "Votre commentaire")){
 
-
     // Verification des données avec la base de données
     $req = $bdd->prepare('SELECT * FROM users WHERE id = :id');
     $req->execute(array(
@@ -41,8 +40,8 @@ if (isset($_POST['id']) AND isset($_GET['id']) AND isset($_POST['post']) AND ($_
 }
 else
 {
- // Redirection
- header("Location: deconnexion.php");
+    // Redirection
+    header("Location: deconnexion.php");
 }
 
     

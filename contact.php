@@ -13,7 +13,7 @@
 <body>     
   <div id="container">  
     <!-- Header  -->
-<?php include("header.php"); ?>
+    <?php include("header.php"); ?>
    
     <!--  Contact  -->
       <section id="contact">
@@ -58,18 +58,10 @@
               <div class="submit">
                 <input type="submit" id='submit' value='Envoyer' />
               </div>  
-
-            
-
             </div>
         </form>
-        
       </section> 
-
-
-   
       <?php include("footer.php"); ?>
   </div>
 </body>
-
 </html>

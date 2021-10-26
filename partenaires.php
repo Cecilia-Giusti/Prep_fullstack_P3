@@ -22,15 +22,15 @@ if(isset($resultat['id'])) {
   $reponse = $bdd->query("SELECT id, id_user, id_actor, DATE_FORMAT(created_at, '%d/%m/%Y à %Hh%i') AS date, post FROM posts WHERE id_actor= $resultat[id] ORDER BY ID DESC");
   
   // Récupération du nombre de commentaires
-  $nombreDeCommentaire = $bdd->query("SELECT COUNT(*) AS nbCom FROM posts WHERE id_actor= $resultat[id]");
+  $nombreDeCommentaire = $bdd->query("SELECT COUNT(*) AS nbCom FROM posts WHERE id_actor= $_GET[id]");
   $count_total = $nombreDeCommentaire->fetch();
 
   // Récupération du nombre de vote like
-  $nombreDeLike = $bdd->query("SELECT COUNT(vote) AS nbLike FROM likes WHERE id_actor= $resultat[id] AND vote=1");
+  $nombreDeLike = $bdd->query("SELECT COUNT(vote) AS nbLike FROM likes WHERE id_actor= $_GET[id] AND vote=1");
   $count_like = $nombreDeLike->fetch();
 
   // Récupération du nombre de vote dislike
-  $nombreDeDislike = $bdd->query("SELECT COUNT(vote) AS nbDislike FROM likes WHERE id_actor= $resultatT[id] AND vote=0");
+  $nombreDeDislike = $bdd->query("SELECT COUNT(vote) AS nbDislike FROM likes WHERE id_actor= $_GET[id] AND vote=0");
   $count_dislike = $nombreDeDislike->fetch();
 
   // Données de la base de données des users

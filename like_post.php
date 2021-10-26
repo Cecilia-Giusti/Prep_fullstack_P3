@@ -28,9 +28,10 @@ include("dataBaseConnection.php");
     $id = $donnees['id'];
 
     // Base de données des votes
-    $req = $bdd->prepare('SELECT * FROM likes WHERE id_user = :id_user');
+    $req = $bdd->prepare('SELECT * FROM likes WHERE id_user = :id_user AND id_actor =:id_actor');
     $req->execute(array(
-        'id_user' => $resultat['id'] 
+        'id_user' => $resultat['id'],
+        'id_actor' => htmlspecialchars($_GET['id']) 
         ));
     $vote = $req->fetch();
 
@@ -56,17 +57,21 @@ include("dataBaseConnection.php");
         else {
             if ($vote['vote']==1) {
                 // Suppression du vote à l'aide d'une requête préparée
-                $req = $bdd->prepare('DELETE FROM likes WHERE id_user = :id_user');
+                $req = $bdd->prepare('DELETE FROM likes WHERE id_user = :id_user AND id_actor =:id_actor AND vote = :vote');
                 $req->execute(array(
-                'id_user'=> $vote['id_user'], 
+                'id_user'=> $vote['id_user'],
+                'id_actor' => $id,
+                'vote' => $vote['vote'] 
                 ));
             }
 
             else {
                 // Suppression du vote à l'aide d'une requête préparée
-                $req = $bdd->prepare('DELETE FROM likes WHERE id_user = :id_user');
+                $req = $bdd->prepare('DELETE FROM likes WHERE id_user = :id_user AND id_actor =:id_actor AND vote = :vote');
                 $req->execute(array(
-                'id_user'=> $vote['id_user'], 
+                'id_user'=> $vote['id_user'],
+                'id_actor' => $id,
+                'vote' => $vote['vote'] 
                 ));
 
                 // Insertion du vote à l'aide d'une requête préparée
@@ -99,19 +104,23 @@ include("dataBaseConnection.php");
 
             else {
                 if ($vote['vote']==0) {
-                    // Suppression du vote à l'aide d'une requête préparée
-                    $req = $bdd->prepare('DELETE FROM likes WHERE id_user = :id_user');
-                    $req->execute(array(
-                    'id_user'=> $vote['id_user'], 
-                    ));
+                // Suppression du vote à l'aide d'une requête préparée
+                $req = $bdd->prepare('DELETE FROM likes WHERE id_user = :id_user AND id_actor =:id_actor AND vote = :vote');
+                $req->execute(array(
+                'id_user'=> $vote['id_user'],
+                'id_actor' => $id,
+                'vote' => $vote['vote'] 
+                ));
                 }
 
                 else {
-                    // Suppression du vote à l'aide d'une requête préparée
-                    $req = $bdd->prepare('DELETE FROM likes WHERE id_user = :id_user');
-                    $req->execute(array(
-                    'id_user'=> $vote['id_user'], 
-                    ));
+                   // Suppression du vote à l'aide d'une requête préparée
+                $req = $bdd->prepare('DELETE FROM likes WHERE id_user = :id_user AND id_actor =:id_actor AND vote = :vote');
+                $req->execute(array(
+                'id_user'=> $vote['id_user'],
+                'id_actor' => $id,
+                'vote' => $vote['vote'] 
+                ));
 
                     // Insertion du vote à l'aide d'une requête préparée
                     $req = $bdd->prepare('INSERT INTO likes (id_user,id_actor,vote) VALUES(?,?,?)');

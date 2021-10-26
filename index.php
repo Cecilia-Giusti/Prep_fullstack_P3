@@ -88,9 +88,6 @@ if (isset($resultat['id'])){
             ?>
       </section>
     </div>
-  </body>
-</html>
-
 <?php
   }
  $reponse->closeCursor();
@@ -104,4 +101,7 @@ include("footer.php");
  header('Location: deconnexion.php');
     }
 
-?>
+?> 
+
+</body>
+</html>

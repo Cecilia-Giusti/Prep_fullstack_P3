@@ -22,9 +22,10 @@ else
 
       if (isset($_POST['name'])) {
         //Modification du nom à l'aide d'une requête préparée
-        $req = $bdd->prepare('UPDATE users SET name = :name');
+        $req = $bdd->prepare('UPDATE users SET name = :name WHERE id = :id');
         $req->execute(array(
-            'name' => htmlspecialchars($_POST['name'])
+            'name' => htmlspecialchars($_POST['name']),
+            'id' => $_SESSION['id']
         ));
 
         $_SESSION['name'] = htmlspecialchars($_POST['name']);
@@ -32,18 +33,20 @@ else
       
       if (isset($_POST['firstname'])) {
         //Modification du prénom à l'aide d'une requête préparée
-        $req = $bdd->prepare('UPDATE users SET firstname = :firstname');
+        $req = $bdd->prepare('UPDATE users SET firstname = :firstname WHERE id = :id');
         $req->execute(array(
-            'firstname' => htmlspecialchars($_POST['firstname'])
+            'firstname' => htmlspecialchars($_POST['firstname']),
+            'id' => $_SESSION['id']
         ));
         $_SESSION['firstname'] = htmlspecialchars($_POST['firstname']);
       }
 
         if (isset($_POST['username'])) {
           //Modification de l'identifiant à l'aide d'une requête préparée
-          $req = $bdd->prepare('UPDATE users SET username = :username');
+          $req = $bdd->prepare('UPDATE users SET username = :username WHERE id = :id');
           $req->execute(array(
-              'username' => htmlspecialchars($_POST['username'])
+              'username' => htmlspecialchars($_POST['username']),
+              'id' => $_SESSION['id']
           ));
         
           $_SESSION['username'] = htmlspecialchars($_POST['username']);

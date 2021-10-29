@@ -15,7 +15,7 @@
     <!-- Header  -->
     <?php include("header.php"); ?>
    
-    <!--  Contact  -->
+    <!--  Corps  -->
       <section id="contact">
         
         <form action="contact_post.php" method="post">
@@ -61,6 +61,7 @@
             </div>
         </form>
       </section> 
+      <!--  Footer  -->
       <?php include("footer.php"); ?>
   </div>
 </body>

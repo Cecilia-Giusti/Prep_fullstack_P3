@@ -1,25 +1,26 @@
 
 <?php
-
-include("dataBaseConnection.php");
 include("middleware.php");
 
+
+// Verification des données, si elles sont présentes et si le commentaire a été rentrée
 if (isset($_POST['id']) AND isset($_GET['id']) AND isset($_POST['post']) AND ($_POST['post'] != "Votre commentaire")){
 
-    // Verification des données avec la base de données
+    // Récupération des données de la base de données des utilisateurs
     $req = $bdd->prepare('SELECT * FROM users WHERE id = :id');
     $req->execute(array(
         'id' => htmlspecialchars($_POST['id']) 
         ));
     $resultat = $req->fetch();
 
-    // Base de données des acteurs - partenaires
+    // Récupération des données de la base de données des  acteurs - partenaires
     $req = $bdd->prepare('SELECT * FROM actors WHERE id = :id');
     $req->execute(array(
         'id' => htmlspecialchars($_GET['id']) 
         ));
     $donnees = $req->fetch();
 
+    // Placement de l'id récupéré dans une variablepour la redirection
     $id = $donnees['id'];
 
 

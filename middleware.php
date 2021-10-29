@@ -1,16 +1,14 @@
 <?php
-   // On démarre la session AVANT d'écrire du code HTML
+   // On démarre la session
  session_start();
  $_SESSION['id'] ;
  $_SESSION['name'];
  $_SESSION['firstname'] ;
  $_SESSION['username'] ;
 
- 
- 
  include ("dataBaseConnection.php");
 
-  // Verification des données avec la base de données
+  // Récupération des données de la base de données des utilisateurs
   $req = $bdd->prepare('SELECT * FROM users WHERE id =:id ');
   $req->execute(array(
       'id' => $_SESSION['id'],

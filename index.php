@@ -2,6 +2,7 @@
 <?php 
 include ("middleware.php");
 
+// Si le middleware renvoit un id existant
 if (isset($resultat['id'])){
 ?>
 
@@ -57,7 +58,7 @@ if (isset($resultat['id'])){
 
         <section> 
         <?php
-          // Récupération des acteurs - partenaires
+          // Récupération des données de la base de données des acteurs - partenaires
           $reponse = $bdd->query('SELECT * FROM actors');
 
           // Affichage de chaque acteurs - partenaires 
@@ -88,8 +89,9 @@ if (isset($resultat['id'])){
             ?>
       </section>
     </div>
+    
 <?php
-  }
+}
  $reponse->closeCursor();
 
 include("footer.php"); 
@@ -97,8 +99,8 @@ include("footer.php");
     }
 
     else{
-       // Redirection
- header('Location: deconnexion.php');
+      // Redirection
+      header('Location: deconnexion.php');
     }
 
 ?> 

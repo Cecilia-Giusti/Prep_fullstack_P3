@@ -1,28 +1,23 @@
 <?php
-// On démarre la session AVANT d'écrire du code HTML
-session_start();
-include("fonctions.php"); 
-actualiser_session();
+include("middleware.php");
 
-include("dataBaseConnection.php");
-
-// Données de la base de données
+// Vérification des données de la base de données des utilisateurs
 $req = $bdd->prepare('SELECT * FROM users WHERE username = :username');
 $req->execute(array(
     'username' => $_SESSION['username'] 
     ));
 $resultat = $req->fetch();
 
-// Comparaison du pass envoyé via le formulaire avec la base
+// Comparaison du mot de passe envoyé via le formulaire avec la base
 $isPasswordCorrect = password_verify($_POST['password'], $resultat['password']);
 
-if (!$resultat)
+if (!$resultat) // Si aucun résultat dans la base de données
 {
     // Redirection
     header('Location: parametres.php');
 }
 else
-{
+{ // Si le mot de passe est correct
     if ($isPasswordCorrect) {
 
       if (isset($_POST['name'])) {

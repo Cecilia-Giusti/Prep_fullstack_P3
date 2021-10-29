@@ -12,13 +12,13 @@ $req->execute(array(
     ));
 $resultat = $req->fetch();
 
-if (!$resultat)
+if (!$resultat) // Si aucun résultat dans la base de données
 {
     // Redirection
     header('Location: motDePasse.php');
 }
 else
-{
+{ // si les deux mots de passe sont egaux
     if ($_POST['password'] == $_POST['okpassword']){
     
         // Hachage du mot de passe

@@ -12,6 +12,7 @@
 
 <body>     
   <div id="container">  
+    <!-- Header  -->
     <?php include("header.php"); ?>
    
     <!--  Mentions légales  -->
@@ -132,7 +133,7 @@
       </section> 
 
 
-   
+      <!-- Footer  -->
      <?php include("footer.php"); ?>
   </div>
 </body>

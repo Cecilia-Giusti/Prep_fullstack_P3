@@ -1,33 +1,25 @@
 
 <?php
-    // On démarre la session AVANT d'écrire du code HTML
-session_start();
-$_SESSION['id'] ;
-$_SESSION['name'];
-$_SESSION['firstname'] ;
-$_SESSION['username'] ;
-include("fonctions.php"); 
-actualiser_session();
+include("middleware.php");
 
-include("dataBaseConnection.php");
-
-// Verification des données avec la base de données
+// Récupération des données de la base de données des utilisateurs
 $req = $bdd->prepare('SELECT * FROM users WHERE id = :id');
 $req->execute(array(
     'id' => $_SESSION['id'] 
     ));
 $resultat = $req->fetch();
 
-// Base de données des acteurs - partenaires
+// Récupération des données de la base de données des acteurs - partenaires
 $req = $bdd->prepare('SELECT * FROM actors WHERE id = :id');
 $req->execute(array(
     'id' => htmlspecialchars($_GET['id']) 
     ));
 $donnees = $req->fetch();
 
+// Placement de l'id récupéré dans une variablepour la redirection
 $id = $donnees['id'];
 
-// Base de données des votes
+// Récupération des données de la base de données des votes
 $req = $bdd->prepare('SELECT * FROM likes WHERE id_user = :id_user AND id_actor =:id_actor');
 $req->execute(array(
     'id_user' => $resultat['id'],

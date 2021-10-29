@@ -1,5 +1,4 @@
 <?php 
-include("dataBaseConnection.php");
 include("middleware.php");
 
 
@@ -71,7 +70,7 @@ if (isset($resultat['id'])){
       <section id="commentaire">
         <div id="menuCommentaire">
           <p>
-            <?php 
+            <?php  // On affiche le nombre total de commentaire
               if ($count_total['nbCom'] > 1) {
                 echo ($count_total['nbCom']) . ' commentaires' ;
               }
@@ -80,19 +79,19 @@ if (isset($resultat['id'])){
               }
             ?>
           </p>
-          
+          <!-- Les boutons de like et dislike -->
           <div class="like"><a  href="like_post.php?id=<?php echo(htmlspecialchars($resultat['id']));?>&amp;vote=1"><img src="images_web/like.png" alt="Like"/> <?php echo ($count_like['nbLike']);?> </a></div>
           <div class="like"><a href="like_post.php?id=<?php echo(htmlspecialchars($resultat['id']));?>&amp;vote=0"><?php echo ($count_dislike['nbDislike']);?>   <img src="images_web/dislike.png" alt="dislike"/> </a></div>
         
     <?php 
 
-    // Ajouter un if l utilisateur à cliqué alors dans une autre couleur 
+   
 
     ?>
 
 
         </div>
-
+        <!-- Ajout d'un commentaire -->      
         <form action="commentaires_post.php?id=<?php echo(htmlspecialchars($resultat['id']));?>" method="post">  
           <article>
             <div class="emplacement">
@@ -108,7 +107,7 @@ if (isset($resultat['id'])){
         </form>
 
         <?php
-      // Affichage de chaque message 
+      // Affichage de chaque commentaire 
       while ($commentaire = $reponse->fetch())
       { 
 
@@ -143,6 +142,7 @@ if (isset($resultat['id'])){
       $reponse->closeCursor();
       ?>
       </section>
+      <!-- Footer  -->
        <?php include("footer.php");?>
     </div>
 </body>

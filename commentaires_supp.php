@@ -1,16 +1,12 @@
 
 <?php
-// On démarre la session 
-session_start();
-include("fonctions.php"); 
-actualiser_session();
-
 include ("middleware.php");
-include("dataBaseConnection.php");
 
+
+// Verification qu'il existe bien un id dans la barre de navigation
 if (isset($_GET['id'])) {
 
-    // Verification des données avec la base de données
+    // Récupération des données de la base de données des utilisateurs
     $req = $bdd->prepare('SELECT * FROM users WHERE name = :name AND firstname =:firstname AND username=:username ');
     $req->execute(array(
         'name' => $_SESSION['name'],
@@ -19,24 +15,25 @@ if (isset($_GET['id'])) {
         ));
     $resultat = $req->fetch();
 
-    // Verification des données avec la base de données
+    // Récupération des données de la base de données des commentaires
     $req = $bdd->prepare('SELECT * FROM posts WHERE id = :id');
     $req->execute(array(
         'id' => htmlspecialchars($_GET['id']) 
         ));
     $commentaire = $req->fetch();
 
-    // Base de données des acteurs - partenaires
+    // Récupération des données de la base de données des acteurs - partenaires
     $req = $bdd->prepare('SELECT * FROM actors WHERE id = :id');
     $req->execute(array(
         'id' => $commentaire['id_actor'] 
         ));
     $donnees = $req->fetch();
 
+    // Placement de l'id récupéré dans une variablepour la redirection
     $id = $donnees['id'];
 
 
-
+     // Verification si l'utilisateur en ligne est le même que l'utilisateur qui a commenté   
      if ($resultat['id']==$commentaire['id_user'])
 
      { 

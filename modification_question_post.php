@@ -1,14 +1,9 @@
 
 <?php
-// On démarre la session AVANT d'écrire du code HTML
-session_start();
-include("fonctions.php"); 
-actualiser_session();
-
-include("dataBaseConnection.php");
+include("middleware.php");
 
 
-// Données de la base de données
+// Récupération des données de la base de données des utilisateurs
 $req = $bdd->prepare('SELECT * FROM users WHERE id = :id');
 $req->execute(array(
     'id' => $_SESSION['id'], 
@@ -16,10 +11,10 @@ $req->execute(array(
 $resultat = $req->fetch();
 
 
-    // Comparaison du password envoyé via le formulaire avec la base de données
-    $isPasswordCorrect = password_verify($_POST['password'], $resultat['password']);
+// Comparaison du password envoyé via le formulaire avec la base de données
+$isPasswordCorrect = password_verify($_POST['password'], $resultat['password']);
 
-
+// Si aucun résultat dans la base de données
 if (!$resultat)
 {
     // Redirection

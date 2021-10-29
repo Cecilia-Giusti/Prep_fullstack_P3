@@ -1530,7 +1530,7 @@
     }
 
 
-    @media all and (max-width: 500px) and(min-width:300px){
+    @media all and (max-width: 500px) and (min-width:300px){
         .messageParametres {
             font-size: 1em;
             width:90%;

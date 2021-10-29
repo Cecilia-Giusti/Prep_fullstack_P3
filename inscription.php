@@ -84,6 +84,7 @@
           <i><a href="connexion.php">J'ai déjà un compte ? Je me connecte</a></i>
         </div>
       </section> 
+    <!-- Footer  -->
     <?php include("footer.php"); ?>
   </div>
 </body>

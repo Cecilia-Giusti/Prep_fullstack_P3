@@ -1,14 +1,8 @@
 
 <?php
-// On démarre la session AVANT d'écrire du code HTML
-session_start();
-include("fonctions.php"); 
-actualiser_session();
+include ("middleware.php");
 
-include("dataBaseConnection.php");
-
-
-// Données de la base de données
+// Récupération des données de la base de données des utilisateurs
 $req = $bdd->prepare('SELECT * FROM users WHERE id = :id');
 $req->execute(array(
     'id' => $_SESSION['id'], 
@@ -26,7 +20,7 @@ if (!$resultat)
     header('Location: connexion.php');
 }
 else
-{
+{   // Si le mot de passe est correct
     if (($isPasswordCorrect) AND ($_POST['password'] == $_POST['passwordok'])){
     
         // Hachage du mot de passe

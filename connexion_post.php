@@ -1,7 +1,7 @@
 <?php
  include("dataBaseConnection.php");
 
-    // Données de la base de données
+    // Récupération des données de la base de données des utilisateurs
     $req = $bdd->prepare('SELECT * FROM users WHERE username = :username');
     $req->execute(array(
         'username' => htmlspecialchars($_POST['username']), 
@@ -18,6 +18,7 @@
     }
     else
     {
+        // Création de la session
         if ($isPasswordCorrect) {
             session_start();
             $_SESSION['id'] = $resultat['id'];

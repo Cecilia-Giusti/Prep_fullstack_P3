@@ -1,12 +1,6 @@
 
 <?php
-// On démarre la session 
-session_start();
-include("fonctions.php"); 
-actualiser_session();
-
-// Connexion à la base de données
-include("dataBaseConnection.php");
+include("middleware.php");
 
 
 // Insertion du message à l'aide d'une requête préparée
